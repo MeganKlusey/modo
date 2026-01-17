@@ -13,4 +13,4 @@ Thumbs.db
 *.swo
 
 # Ignore large files
-/themes/modo/node_modules/
+themes/modo/node_modules/

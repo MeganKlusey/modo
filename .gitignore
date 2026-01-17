@@ -11,3 +11,6 @@ backup-*/
 Thumbs.db
 *.swp
 *.swo
+
+# Ignore large files
+/themes/modo/node_modules/

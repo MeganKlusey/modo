@@ -1,2 +1,3 @@
-<?php
-  // index.php for Modo theme
+<?php get_header(); ?>
+
+<?php get_footer(); ?>

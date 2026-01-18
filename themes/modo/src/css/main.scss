@@ -1,7 +1,2 @@
-p {
-  color: pink;
-
-  span {
-    color: purple;
-  }
-}
+@use "fonts";
+@use "home/hero.scss";

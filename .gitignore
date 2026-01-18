@@ -15,3 +15,8 @@ Thumbs.db
 
 # Ignore large files
 themes/modo/node_modules/
+
+# Ignore installed plugins
+plugins/*
+plugins/.gitkeep
+litespeed/

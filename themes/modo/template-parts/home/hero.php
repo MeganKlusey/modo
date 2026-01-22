@@ -1,4 +1,4 @@
 <section class="hero">
-  <h1><?php the_title(); ?></h1>
-  <img src="<?php echo esc_url(wp_get_attachment_url(23)); ?>" alt="" />
+  <img src="<?php echo esc_url(wp_get_attachment_url(23)); ?>" alt="" class="hero__image" />
+  <h1 class="hero__title"><?php the_title(); ?></h1>
 </section>

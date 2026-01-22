@@ -17,3 +17,11 @@
 			}
 		}
 	});
+
+	function modo_register_menus() {
+    register_nav_menus( array(
+			'primary-menu' => __('Primary Menu', 'modo'),
+			'footer-menu' => __('Footer Menu', 'modo'),
+    ));
+	}
+	add_action('init', 'modo_register_menus');

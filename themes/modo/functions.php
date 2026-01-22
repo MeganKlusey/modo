@@ -1,6 +1,7 @@
 <?php
 	add_action('wp_enqueue_scripts', function () {
 		if (@file_get_contents("http://localhost:5173/@vite/client")) {
+			echo '<style>html { visibility: hidden; }</style>';
 			wp_enqueue_script('vite-client', "http://localhost:5173/@vite/client", [], null, false);
 			wp_enqueue_script('modo-js', "http://localhost:5173/src/js/main.js", [], null, true);
 			add_filter('script_loader_tag', function ($tag, $handle) {

@@ -1,11 +1,29 @@
 .hero {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+
   &__image {
-    height: 100vh;
     width: 100%;
-    position: relative;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .container {
+    position: absolute;
+    inset: 0;
+    box-sizing: border-box;
   }
 
   &__title {
-    position: absolute;
+    text-align: right;
+    word-wrap: break-word;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    justify-self: end;
+    gap: 1.5rem;
   }
 }

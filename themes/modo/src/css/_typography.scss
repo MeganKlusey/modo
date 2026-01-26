@@ -30,7 +30,7 @@ h1 {
 
 h2 {
   font-size: 3rem;
-  font-weight: var(--regular);
+  font-weight: var(--font-regular);
   letter-spacing: 0em;
   line-height: 1;
 
@@ -49,16 +49,12 @@ h2 {
 
 h3 {
   font-size: 2.75rem;
-  font-weight: var(--regular);
+  font-weight: var(--font-regular);
   letter-spacing: 0em;
   line-height: 1;
 
   @media only screen and (orientation: landscape) and (max-width: calc(var(--md) - 1px)) {
     font-size: 3rem;
-  }
-
-  @media only screen and (orientation: landscape) and (max-width: calc(var(--md) - 1px)) {
-    font-size: 6rem;
   }
 
   @media screen and (min-width: var(--md)) {
@@ -72,7 +68,7 @@ h3 {
 
 h4 {
   font-size: 2.5rem;
-  font-weight: var(--regular);
+  font-weight: var(--font-regular);
   letter-spacing: 0em;
   line-height: 1.1;
 
@@ -91,7 +87,7 @@ h4 {
 
 h5 {
   font-size: 2.25rem;
-  font-weight: var(--regular);
+  font-weight: var(--font-regular);
   letter-spacing: 0em;
   line-height: 1.15;
 
@@ -110,7 +106,7 @@ h5 {
 
 h6 {
   font-size: 2rem;
-  font-weight: var(--regular);
+  font-weight: var(--font-regular);
   letter-spacing: 0em;
   line-height: 1.2;
 

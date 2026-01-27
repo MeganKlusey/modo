@@ -1,0 +1,19 @@
+.menu-primary-menu-container {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+
+  .menu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+
+    li {
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}

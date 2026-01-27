@@ -1,5 +1,8 @@
 .container {
   width: 100%;
   max-width: 100%;
-  padding-inline: 1.5rem;
+}
+
+.padding--global {
+  padding: var(--xhuge) var(--xxlarge);
 }

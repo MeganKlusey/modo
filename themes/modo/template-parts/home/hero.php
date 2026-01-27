@@ -1,6 +1,6 @@
 <section class="hero">
 	<img src="<?php echo esc_url(wp_get_attachment_url(23)); ?>" alt="" class="hero__image" />
-	<div class="container">
+	<div class="container padding--global">
 		<div class="hero__main">
 			<h1 class="hero__title"><span>Modo</span><span>Museum</span></h1>
 			<div class="hero__description">

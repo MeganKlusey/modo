@@ -21,7 +21,14 @@
 	function modo_register_menus() {
     register_nav_menus( array(
 			'primary-menu' => __('Primary Menu', 'modo'),
-			'footer-menu' => __('Footer Menu', 'modo'),
     ));
 	}
 	add_action('init', 'modo_register_menus');
+
+	function add_menu_link_class( $atts, $item, $args ) {
+		if (property_exists($args, 'link_class')) {
+			$atts['class'] = $args->link_class;
+		}
+		return $atts;
+	}
+	add_filter( 'nav_menu_link_attributes', 'add_menu_link_class', 1, 3 );

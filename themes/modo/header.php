@@ -11,9 +11,17 @@
 
 <body <?php body_class(); ?>>
 	<header>
-		<?php
-			wp_nav_menu(array(
-				"menu" => "Primary Menu"
-			));
-		?>
+		<div class="menu__container">
+			<a href="<?= get_home_url(); ?>" class="text-xs">Modo Museum</a>
+			<nav>
+				<?php
+					wp_nav_menu(array(
+						"menu" => "Primary Menu",
+						"container" => "false",
+						"link_class" => "text-xs"
+					));
+				?>
+			</nav>
+			<p class="text-xs">LA, California</p>
+		</div>
 	</header>

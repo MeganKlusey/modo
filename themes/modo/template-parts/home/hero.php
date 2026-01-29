@@ -14,7 +14,9 @@
 					foreach ($offsiteCTAs as $offsiteCTA) {
 				?>
 				<li>
-					<a href="<?= $offsiteCTA["url"] ?>" class="text-xs"><?= $offsiteCTA["label"]; ?></a>
+					<a href="<?= $offsiteCTA["url"] ?>" class="text-xs"><?= $offsiteCTA["label"]; ?>
+						<?php get_template_part('src/images/icons/arrow'); ?>
+					</a>
 				</li>
 				<?php } ?>
 			</ul>

@@ -35,7 +35,9 @@
           list-style-type: none;
 
           a {
-            display: block;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
             text-decoration: none;
             text-transform: uppercase;
           }

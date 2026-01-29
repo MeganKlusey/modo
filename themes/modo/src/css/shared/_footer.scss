@@ -1,0 +1,22 @@
+footer {
+  background-color: var(--black);
+
+  .wrapper {
+    padding: var(--p-large) var(--xxlarge);
+
+    .case-studies {
+      display: flex;
+      gap: var(--xxhuge);
+
+      &__title {
+        text-transform: uppercase;
+      }
+
+      &__text {
+      }
+
+      &__link {
+      }
+    }
+  }
+}

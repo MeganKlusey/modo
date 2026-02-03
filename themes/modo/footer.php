@@ -10,6 +10,33 @@
 				</a>
 			</div>
 		</div>
+		<div class="links__wrapper">
+			<nav>
+				<?php
+					wp_nav_menu(array(
+						"menu" => "Primary Menu",
+						"container" => "false",
+						"link_class" => "text-xs"
+					));
+				?>
+			</nav>
+			<ul class="offsite-links">
+				<?php 
+					$offsiteLinks = array(
+						["label" => "X", "url" => "#"],
+						["label" => "LinkedIn", "url" => "#"],
+						["label" => "Instagram", "url" => "#"],
+						["label" => "hello@megan.com", "url" => "#"],
+					);
+
+					foreach ($offsiteLinks as $offsiteLink) {
+				?>
+				<li>
+					<a href="<?= $offsiteLink["url"] ?>" class="text-xs"><?= $offsiteLink["label"]; ?></a>
+				</li>
+				<?php } ?>
+			</ul>
+		</div>
 	</div>
 </footer>
 <?php wp_footer(); ?>

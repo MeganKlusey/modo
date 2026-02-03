@@ -4,12 +4,12 @@
 		<div class="hero__left">
 			<ul class="hero__offsite-links">
 				<?php 
-					$offsiteLinks = array(
+					$offsiteLinks = [
 						["label" => "X", "url" => "#"],
 						["label" => "LinkedIn", "url" => "#"],
 						["label" => "Instagram", "url" => "#"],
 						["label" => "hello@megan.com", "url" => "#"],
-					);
+					];
 
 					foreach ($offsiteLinks as $offsiteLink) {
 				?>

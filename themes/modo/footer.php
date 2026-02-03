@@ -2,7 +2,7 @@
 	<div class="wrapper">
 		<div class="case-studies">
 			<h2 class="case-studies__title text-xs">Case Studies</h2>
-			<div class="case-studies--right">
+			<div class="case-studies__right">
 				<p class="case-studies__text text-4xl">Great design isn't just about what you make. It's about who you make it
 					with.</p>
 				<a href="#" class="case-studies__link text-xs">
@@ -10,7 +10,7 @@
 				</a>
 			</div>
 		</div>
-		<div class="links__wrapper">
+		<div class="links">
 			<nav>
 				<?php
 					wp_nav_menu(array(
@@ -20,7 +20,7 @@
 					));
 				?>
 			</nav>
-			<ul class="offsite-links">
+			<ul class="links__offsite">
 				<?php 
 					$offsiteLinks = array(
 						["label" => "X", "url" => "#"],

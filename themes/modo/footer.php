@@ -11,31 +11,40 @@
 			</div>
 		</div>
 		<div class="links">
-			<nav>
-				<?php
-					wp_nav_menu(array(
-						"menu" => "Primary Menu",
-						"container" => "false",
-						"link_class" => "text-xs"
-					));
-				?>
-			</nav>
-			<ul class="links__offsite">
-				<?php 
-					$offsiteLinks = array(
-						["label" => "X", "url" => "#"],
-						["label" => "LinkedIn", "url" => "#"],
-						["label" => "Instagram", "url" => "#"],
-						["label" => "hello@megan.com", "url" => "#"],
-					);
+			<div class="links__left">
+				<nav>
+					<?php
+							wp_nav_menu(array(
+								"menu" => "Primary Menu",
+								"container" => "false",
+								"link_class" => "text-xs"
+							));
+						?>
+				</nav>
+				<ul class="links__offsite">
+					<?php 
+							$offsiteLinks = array(
+								["label" => "X", "url" => "#"],
+								["label" => "LinkedIn", "url" => "#"],
+								["label" => "Instagram", "url" => "#"],
+								["label" => "hello@megan.com", "url" => "#"],
+							);
 
-					foreach ($offsiteLinks as $offsiteLink) {
-				?>
-				<li>
-					<a href="<?= $offsiteLink["url"] ?>" class="text-xs"><?= $offsiteLink["label"]; ?></a>
-				</li>
-				<?php } ?>
-			</ul>
+							foreach ($offsiteLinks as $offsiteLink) {
+						?>
+					<li>
+						<a href="<?= $offsiteLink["url"] ?>" class="text-xs"><?= $offsiteLink["label"]; ?></a>
+					</li>
+					<?php } ?>
+				</ul>
+			</div>
+			<div class="links__right">
+				<p class="text-xs">LA, California</p>
+				<div>
+					<h3 class="text-xs">Office hours</h3>
+					<p class="text-xs">Monday - Friday 11 AM - 2 PM</p>
+				</div>
+			</div>
 		</div>
 	</div>
 </footer>

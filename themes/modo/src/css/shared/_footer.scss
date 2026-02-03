@@ -1,64 +1,69 @@
 footer {
   background-color: var(--black);
+  gap: 6.5rem;
+  position: relative;
 
-  .wrapper {
-    display: flex;
-    flex-direction: column;
+  .wrapper-padding {
     padding: var(--p-large) var(--xxlarge);
-    gap: 6.5rem;
-    max-width: 80rem;
-    width: 100%;
-    margin: 0 auto;
 
-    .case-studies {
+    .wrapper {
       display: flex;
-      justify-content: space-between;
-      gap: var(--xxhuge);
+      flex-direction: column;
+      gap: 6.5rem;
+      max-width: 80rem;
+      width: 100%;
+      margin: 0 auto;
 
-      &__title {
-        text-transform: uppercase;
-        white-space: nowrap;
+      .case-studies {
+        display: flex;
+        justify-content: space-between;
+        gap: var(--xxhuge);
+
+        &__title {
+          text-transform: uppercase;
+          white-space: nowrap;
+        }
+
+        &__right {
+          display: flex;
+          flex-direction: column;
+          gap: var(--xhuge);
+          max-width: 46rem;
+          width: auto;
+        }
+
+        &__link {
+          display: flex;
+          align-items: center;
+          gap: var(--small);
+        }
       }
 
-      &__right {
+      .links {
         display: flex;
-        flex-direction: column;
-        gap: var(--xhuge);
-        max-width: 46rem;
-        width: auto;
-      }
+        justify-content: space-between;
 
-      &__link {
-        display: flex;
-        align-items: center;
-        gap: var(--small);
-      }
-    }
+        &__left {
+          display: flex;
+          gap: 12.5rem;
+        }
 
-    .links {
-      display: flex;
-      justify-content: space-between;
+        .menu,
+        &__offsite {
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          list-style-type: none;
+          gap: var(--huge);
+        }
 
-      &__left {
-        display: flex;
-        gap: 12.5rem;
-      }
-
-      .menu,
-      &__offsite {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        list-style-type: none;
-        gap: var(--xxlarge);
-      }
-
-      &__right {
-        display: flex;
-        flex-direction: column;
-        gap: var(--huge);
-        text-transform: uppercase;
+        &__right {
+          display: flex;
+          flex-direction: column;
+          gap: var(--huge);
+          text-transform: uppercase;
+        }
       }
     }
   }

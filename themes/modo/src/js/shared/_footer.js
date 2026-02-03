@@ -1,5 +1,5 @@
 function adjustTextWidth() {
-  const container = document.querySelector(".case-studies--right");
+  const container = document.querySelector(".case-studies__right");
   const text = container.querySelector(".case-studies__text");
 
   container.style.width = "auto";

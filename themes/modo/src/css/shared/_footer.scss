@@ -68,30 +68,38 @@ footer {
     }
   }
 
-  .images {
-    display: flex;
-    align-items: center;
-    gap: 3.5rem;
+  .carousel {
+    overflow-x: auto;
 
-    .image-1,
-    .image-3 {
-      max-height: 12.5rem;
+    &::-webkit-scrollbar {
+      display: none;
     }
 
-    .image-2,
-    .image-4 {
-      max-height: 15rem;
-      aspect-ratio: 16 / 9;
-    }
+    .images {
+      display: flex;
+      align-items: center;
+      gap: 3.5rem;
 
-    .image-1,
-    .image-2,
-    .image-3,
-    .image-4 {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      .image-1,
+      .image-3 {
+        max-height: 12.5rem;
+      }
+
+      .image-2,
+      .image-4 {
+        max-height: 15rem;
+        aspect-ratio: 16 / 9;
+      }
+
+      .image-1,
+      .image-2,
+      .image-3,
+      .image-4 {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
   }
 }

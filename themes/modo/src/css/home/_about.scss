@@ -1,25 +1,27 @@
 .about {
-  min-height: 100vh;
   position: relative;
 
   .wrapper-padding {
     padding-inline: var(--xxlarge);
+    position: relative;
+    padding-bottom: 25vh;
 
     .wrapper {
       display: flex;
       flex-direction: column;
-      height: 100%;
+      min-height: 100%;
       max-width: 80rem;
       width: 100%;
       margin: 0 auto;
-      padding-bottom: var(--large);
+      position: relative;
     }
   }
 
   &__text {
-    height: 100vh;
     position: sticky;
     top: 0;
+    padding-top: 50vh;
+    height: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -43,7 +45,8 @@
   }
 
   &__images {
-    padding-bottom: 14rem;
+    padding-top: 50vh;
+    padding-bottom: 25vh;
     display: flex;
     flex-direction: column;
 

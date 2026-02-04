@@ -17,6 +17,7 @@
     flex-direction: column;
     justify-content: center;
     gap: var(--xxhuge);
+    mix-blend-mode: difference;
 
     h2 {
       text-transform: uppercase;

@@ -61,7 +61,7 @@
 
 					foreach ($images as $image) {
 				?>
-			<img src="<?php echo esc_url(wp_get_attachment_url($image["url"])); ?>" alt=""
+			<img src="<?= esc_url(wp_get_attachment_url($image["url"])); ?>" alt=""
 				class="image image-<?= $image["label"] ?>" />
 			<?php } ?>
 		</div>
@@ -76,7 +76,7 @@
 
 					foreach ($images as $image) {
 				?>
-			<img src="<?php echo esc_url(wp_get_attachment_url($image["url"])); ?>" alt=""
+			<img src="<?= esc_url(wp_get_attachment_url($image["url"])); ?>" alt=""
 				class="image image-<?= $image["label"] ?>" />
 			<?php } ?>
 		</div>

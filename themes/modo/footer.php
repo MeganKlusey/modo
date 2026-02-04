@@ -52,17 +52,32 @@
 	<div class="carousel">
 		<div class="images">
 			<?php
-				$images = [
-					["label" => "1", "url" => "44"],
-					["label" => "2", "url" => "20"],
-					["label" => "3", "url" => "45"],
-					["label" => "4", "url" => "22"]
-				];
+					$images = [
+						["label" => "1", "url" => "44"],
+						["label" => "2", "url" => "20"],
+						["label" => "3", "url" => "45"],
+						["label" => "4", "url" => "22"]
+					];
 
-				foreach ($images as $image) {
-			?>
+					foreach ($images as $image) {
+				?>
 			<img src="<?php echo esc_url(wp_get_attachment_url($image["url"])); ?>" alt=""
-				class="image-<?= $image["label"] ?>" />
+				class="image image-<?= $image["label"] ?>" />
+			<?php } ?>
+		</div>
+		<div aria-hidden class="images">
+			<?php
+					$images = [
+						["label" => "1", "url" => "44"],
+						["label" => "2", "url" => "20"],
+						["label" => "3", "url" => "45"],
+						["label" => "4", "url" => "22"]
+					];
+
+					foreach ($images as $image) {
+				?>
+			<img src="<?php echo esc_url(wp_get_attachment_url($image["url"])); ?>" alt=""
+				class="image image-<?= $image["label"] ?>" />
 			<?php } ?>
 		</div>
 	</div>

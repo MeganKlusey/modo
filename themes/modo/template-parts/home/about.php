@@ -10,17 +10,18 @@
 		</div>
 		<?php
 			$images = [
-				["label" => "", "url" => "5"],
-				["label" => "", "url" => "6"],
-				["label" => "", "url" => "7"],
-				["label" => "", "url" => "8"],
-				["label" => "", "url" => "9"],
-				["label" => "", "url" => "10"],
+				["label" => "1", "url" => "5"],
+				["label" => "2", "url" => "6"],
+				["label" => "3", "url" => "7"],
+				["label" => "4", "url" => "8"],
+				["label" => "5", "url" => "9"],
+				["label" => "6", "url" => "10"],
 			];
 
 			foreach($images as $image) {
 		?>
-		<img src="<?= esc_url(wp_get_attachment_url($image["url"])); ?>" alt="" class="" />
+		<img src="<?= esc_url(wp_get_attachment_url($image["url"])); ?>" alt=""
+			class="image image-<?= $image["label"]; ?>" />
 		<?php } ?>
 	</div>
 </section>

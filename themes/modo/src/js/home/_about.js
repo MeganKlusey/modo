@@ -5,9 +5,10 @@ function addPadding() {
 
   const height = text.getBoundingClientRect().height;
 
-  let padding = `calc(${height}px - 50vh + 7rem)`;
-  wrapper.style.paddingBottom = padding;
-  images.style.paddingBottom = padding;
+  let wrapperPadding = `calc(${height}px - 50vh + 7rem)`;
+  let imagesPadding = `calc(${height}px - 50vh + 14rem)`;
+  wrapper.style.paddingBottom = wrapperPadding;
+  images.style.paddingBottom = imagesPadding;
 }
 
 window.addEventListener("load", () => {

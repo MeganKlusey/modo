@@ -4,7 +4,6 @@
   .wrapper-padding {
     padding-inline: var(--xxlarge);
     position: relative;
-    padding-bottom: 25vh;
 
     .wrapper {
       display: flex;
@@ -46,7 +45,6 @@
 
   &__images {
     padding-top: 50vh;
-    padding-bottom: 25vh;
     display: flex;
     flex-direction: column;
 

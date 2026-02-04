@@ -1,7 +1,6 @@
 <section class="about">
 	<div class="wrapper-padding">
 		<div class="wrapper">
-			<div class="spacer"></div>
 			<div class="about__text">
 				<h2 class="text-xs">About</h2>
 				<p class="text-2xl">Founded to preserve and celebrate art, history, and culture, our museum brings together

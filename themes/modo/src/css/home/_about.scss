@@ -1,2 +1,27 @@
 .about {
+  position: sticky;
+  top: 0;
+  min-height: 100vh;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--xxhuge);
+    height: 100%;
+
+    h2 {
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+      font-weight: var(--font-regular);
+      max-width: 45.5rem;
+      width: 100%;
+      text-wrap: balance;
+    }
+  }
 }

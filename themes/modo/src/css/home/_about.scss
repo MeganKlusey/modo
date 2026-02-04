@@ -1,12 +1,17 @@
 .about {
   min-height: 100vh;
 
-  .wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+  .wrapper-padding {
+    padding-inline: var(--xxlarge);
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      padding-bottom: var(--large);
+    }
   }
 
   &__text {
@@ -33,31 +38,35 @@
     }
   }
 
-  .image {
-    width: 100%;
+  &__images {
+    padding-bottom: 14rem;
 
-    &-1 {
-      max-width: 11.25rem;
-    }
+    .image {
+      width: 100%;
 
-    &-2 {
-      max-width: 28.75rem;
-    }
+      &-1 {
+        max-width: 11.25rem;
+      }
 
-    &-3 {
-      max-width: 18rem;
-    }
+      &-2 {
+        max-width: 28.75rem;
+      }
 
-    &-4 {
-      max-width: 32.5rem;
-    }
+      &-3 {
+        max-width: 18rem;
+      }
 
-    &-5 {
-      max-width: 30rem;
-    }
+      &-4 {
+        max-width: 32.5rem;
+      }
 
-    &-6 {
-      max-width: 20rem;
+      &-5 {
+        max-width: 30rem;
+      }
+
+      &-6 {
+        max-width: 20rem;
+      }
     }
   }
 }

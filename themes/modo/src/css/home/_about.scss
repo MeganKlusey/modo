@@ -46,11 +46,18 @@
     display: flex;
     flex-direction: column;
 
+    .row {
+      display: flex;
+      justify-content: space-between;
+    }
+
     .image {
       width: 100%;
 
       &-1 {
+        height: 100%;
         max-width: 11.25rem;
+        margin-top: 5rem;
       }
 
       &-2 {

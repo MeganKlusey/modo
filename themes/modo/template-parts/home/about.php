@@ -12,20 +12,32 @@
 			</div>
 			<div class="about__images">
 				<?php
-				$images = [
-					["label" => "1", "url" => "5"],
-					["label" => "2", "url" => "6"],
-					["label" => "3", "url" => "7"],
-					["label" => "4", "url" => "8"],
-					["label" => "5", "url" => "9"],
-					["label" => "6", "url" => "10"],
-				];
+					$images = [
+						["label" => "1", "url" => "5"],
+						["label" => "2", "url" => "6"],
+						["label" => "3", "url" => "7"],
+						["label" => "4", "url" => "8"],
+						["label" => "5", "url" => "9"],
+						["label" => "6", "url" => "10"],
+					];
 
-				foreach($images as $image) {
-			?>
+					$index = 0;
+
+					foreach($images as $image) {
+
+					if ($index === 0) {
+						echo '<div class="row">';
+					}
+				?>
 				<img src="<?= esc_url(wp_get_attachment_url($image["url"])); ?>" alt=""
 					class="image image-<?= $image["label"]; ?>" />
-				<?php } ?>
+				<?php 
+					if ($index === 1) {
+						echo '</div>';
+					}
+
+					$index++;
+				} ?>
 			</div>
 		</div>
 	</div>

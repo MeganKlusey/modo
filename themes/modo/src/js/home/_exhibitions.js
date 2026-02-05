@@ -1,17 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
   const items = document.querySelectorAll(".exhibitions__item");
+  const images = document.querySelectorAll(".exhibitions__image");
 
-  items[0].style.opacity = 1;
+  items[0].classList.add("active");
+  images[0].classList.add("active");
 
-  items.forEach((item) => {
+  items.forEach((item, index) => {
     item.addEventListener("mouseenter", () => {
       items.forEach((i) => {
-        i.classList.remove("active");
         i.style.transitionDuration = "0.4s";
-        i.style.opacity = 0.4;
+        i.classList.remove("active");
       });
+      images.forEach((img) => img.classList.remove("active"));
+
       item.classList.add("active");
-      item.style.opacity = 1;
+      images[index].classList.add("active");
     });
   });
 });

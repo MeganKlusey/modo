@@ -21,6 +21,10 @@
   }
 
   &__right {
+    display: flex;
+    flex-direction: column;
+    gap: 6.25rem;
+
     ul {
       display: flex;
       flex-direction: column;
@@ -35,6 +39,12 @@
           opacity: 0.4;
         }
       }
+    }
+
+    .all-link {
+      display: flex;
+      align-items: center;
+      gap: var(--small);
     }
   }
 }

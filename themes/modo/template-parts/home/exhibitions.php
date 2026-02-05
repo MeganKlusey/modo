@@ -26,6 +26,9 @@
 							endif;
 						?>
 					</ul>
+					<a href="#" class="all-link text-xs">
+						<? get_template_part("src/inc/icons/bullet-point") ?>Get tickets
+					</a>
 				</div>
 			</div>
 		</div>

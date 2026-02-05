@@ -43,8 +43,8 @@
 
 	// Custom Post Types
 	function exhibitions_post_type() {
-		$args = array(
-			'labels' => array(
+		$args = [
+			'labels' => [
 				'name'          => 'Exhibitions',
 				'singular_name' => 'Exhibition',
 				'menu_name'     => 'Exhibitions',
@@ -53,17 +53,12 @@
 				'new_item'      => 'New Exhibition',
 				'edit_item'     => 'Edit Exhibition',
 				'view_item'     => 'View Exhibition',
-				'all_items'     => 'All Exhibitions',
-				'search_items'  => 'Search Exhibitions',
-				'not_found'     => 'No Exhibitions found',
-				'not_found_in_trash' => 'No Exhibitions found in Trash'
-			),
-			'public' => true,
+				'all_items'     => 'All Exhibitions'
+			],
 			'has_archive' => true,
-			'show_in_rest' => true,
-			'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt' ),
+			'supports' => ['title', 'editor', 'author', 'thumbnail', 'excerpt'],
 			'menu_icon' => 'dashicons-tickets',
-    );
+    ];
 
     register_post_type( 'exhibition', $args );
 	}

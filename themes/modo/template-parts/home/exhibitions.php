@@ -19,7 +19,7 @@
 							
 							if ( $query->have_posts() ) :
 							while ( $query->have_posts() ) : $query->the_post();?>
-						<h2><?php the_title(); ?></h2>
+						<h3 class="text-5xl"><?php the_title(); ?></h3>
 						<?php
 							endwhile;
 							wp_reset_postdata();

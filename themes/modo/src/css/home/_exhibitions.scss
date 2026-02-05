@@ -1,2 +1,20 @@
 .exhibitions {
+  .wrapper-padding {
+    padding-inline: var(--xxlarge);
+    padding-top: var(--p-large);
+
+    .wrapper {
+      margin: 0 auto;
+      gap: var(--xxhuge);
+      display: flex;
+      max-width: 80rem;
+      width: 100%;
+    }
+  }
+
+  &__left {
+    h2 {
+      text-transform: uppercase;
+    }
+  }
 }

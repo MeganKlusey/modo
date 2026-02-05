@@ -93,3 +93,29 @@
     }
   }
 }
+
+.wrapper-padding {
+  padding-bottom: 6rem;
+}
+
+.about__images {
+  padding-bottom: 8rem;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper-padding {
+    padding-bottom: 7.5rem;
+  }
+  .about__images {
+    padding-bottom: 10rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .wrapper-padding {
+    padding-bottom: 7.5rem;
+  }
+  .about__images {
+    padding-bottom: 14rem;
+  }
+}

@@ -54,6 +54,14 @@
   --p-large: 4rem;
   --p-xlarge: 10rem;
 
+  @media screen and (min-width: 768px) {
+    // Padding
+    --p-small: 3rem;
+    --p-medium: 4rem;
+    --p-large: 5rem;
+    --p-xlarge: 10rem;
+  }
+
   @media screen and (min-width: 1024px) {
     // Padding
     --p-small: 4rem;

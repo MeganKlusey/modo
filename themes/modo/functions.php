@@ -1,4 +1,5 @@
 <?php
+	// Vite - dev and prod
 	add_action('wp_enqueue_scripts', function () {
 		if (@file_get_contents("http://localhost:5173/@vite/client")) {
 			echo '<style>html { visibility: hidden; }</style>';
@@ -18,6 +19,13 @@
 		}
 	});
 
+	// Theme setup
+	function modo_theme_setup() {
+		add_theme_support( 'post-thumbnails' );
+	}
+	add_action( 'after_setup_theme', 'modo_theme_setup' );
+
+	// Menus
 	function modo_register_menus() {
     register_nav_menus( array(
 			'primary-menu' => __('Primary Menu', 'modo'),
@@ -33,6 +41,7 @@
 	}
 	add_filter( 'nav_menu_link_attributes', 'add_menu_link_class', 1, 3 );
 
+	// Custom Post Types
 	function exhibitions_post_type() {
 		$args = array(
 			'labels' => array(

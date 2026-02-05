@@ -8,7 +8,7 @@
 					</div>
 				</div>
 				<div class="exhibitions__right">
-					<ul>
+					<ul class="exhibitions__list">
 						<?php
 							$args = array(
 								'post_type' => 'exhibition',
@@ -19,7 +19,7 @@
 							
 							if ( $query->have_posts() ) :
 							while ( $query->have_posts() ) : $query->the_post();?>
-						<li class="text-5xl"><a href=""><?php the_title(); ?></a></li>
+						<li class="text-5xl exhibitions__item"><a href=""><?php the_title(); ?></a></li>
 						<?php
 							endwhile;
 							wp_reset_postdata();

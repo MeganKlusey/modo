@@ -4,6 +4,15 @@
   .wrapper-padding {
     padding-inline: var(--xxlarge);
     position: relative;
+    padding-bottom: 6rem;
+
+    @media screen and (min-width: 768px) {
+      padding-bottom: 7.5rem;
+    }
+
+    @media screen and (min-width: 1024px) {
+      padding-bottom: 7.5rem;
+    }
 
     .wrapper {
       display: flex;
@@ -47,6 +56,15 @@
     padding-top: 50vh;
     display: flex;
     flex-direction: column;
+    padding-bottom: 8rem;
+
+    @media screen and (min-width: 768px) {
+      padding-bottom: 10rem;
+    }
+
+    @media screen and (min-width: 1024px) {
+      padding-bottom: 14rem;
+    }
 
     .row {
       display: flex;
@@ -91,31 +109,5 @@
         margin-right: 1rem;
       }
     }
-  }
-}
-
-.wrapper-padding {
-  padding-bottom: 6rem;
-}
-
-.about__images {
-  padding-bottom: 8rem;
-}
-
-@media screen and (min-width: 768px) {
-  .wrapper-padding {
-    padding-bottom: 7.5rem;
-  }
-  .about__images {
-    padding-bottom: 10rem;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .wrapper-padding {
-    padding-bottom: 7.5rem;
-  }
-  .about__images {
-    padding-bottom: 14rem;
   }
 }

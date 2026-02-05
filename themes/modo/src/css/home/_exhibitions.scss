@@ -4,6 +4,8 @@
     padding-top: var(--p-large);
 
     .wrapper {
+      display: flex;
+      justify-content: space-between;
       margin: 0 auto;
       gap: var(--xxhuge);
       display: flex;
@@ -15,6 +17,24 @@
   &__left {
     h2 {
       text-transform: uppercase;
+    }
+  }
+
+  &__right {
+    ul {
+      display: flex;
+      flex-direction: column;
+      list-style-type: none;
+      gap: var(--xxlarge);
+      margin: 0;
+      padding: 0;
+
+      li {
+        a {
+          text-transform: unset;
+          opacity: 0.4;
+        }
+      }
     }
   }
 }

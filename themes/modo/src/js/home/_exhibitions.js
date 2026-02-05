@@ -5,7 +5,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   items.forEach((item) => {
     item.addEventListener("mouseenter", () => {
-      items.forEach((i) => (i.style.opacity = 0.3));
+      items.forEach((i) => {
+        i.classList.remove("active");
+        i.style.transitionDuration = "0.4s";
+        i.style.opacity = 0.4;
+      });
+      item.classList.add("active");
       item.style.opacity = 1;
     });
   });

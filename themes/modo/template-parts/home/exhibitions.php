@@ -18,7 +18,7 @@
 							$query = new WP_Query( $args );
 							
 							if ( $query->have_posts() ) :
-							while ( $query->have_posts() ) : $query->the_post();?>
+							while ( $query->have_posts() ) : $query->the_post(); ?>
 						<li class="text-5xl exhibitions__item"><a href=""><?php the_title(); ?></a></li>
 						<?php
 							endwhile;
@@ -26,7 +26,7 @@
 							endif;
 						?>
 					</ul>
-					<a href="#" class="all-link text-xs">
+					<a href="#" class="exhibitions__link text-xs">
 						<? get_template_part("src/inc/icons/bullet-point") ?>Get tickets
 					</a>
 				</div>

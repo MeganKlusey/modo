@@ -43,11 +43,11 @@
         }
       }
     }
+  }
 
-    .all-link {
-      display: flex;
-      align-items: center;
-      gap: var(--small);
-    }
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: var(--small);
   }
 }

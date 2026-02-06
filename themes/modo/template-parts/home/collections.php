@@ -9,6 +9,25 @@
 						art through objects that have shaped the world.</p>
 				</div>
 			</div>
+			<div class="collections__images">
+				<?php 
+					$args = [
+						"post_type" => "collection",
+						"posts_per_page" => 4,
+						"order" => "ASC"
+					];
+					$query = new WP_Query($args);
+
+					if ( $query->have_posts() ) :
+					while ( $query->have_posts() ) : $query->the_post(); ?>
+				<div>
+					<img src="" alt="" class="" />
+				</div>
+				<?php 
+					endwhile;
+					wp_reset_postdata();
+				endif; ?>
+			</div>
 		</div>
 	</div>
 </section>

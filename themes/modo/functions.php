@@ -83,6 +83,7 @@
 			'has_archive' => true,
 			'supports' => ['title', 'editor', 'author', 'thumbnail', 'excerpt'],
 			'menu_icon' => 'dashicons-portfolio',
+			'show_in_rest' => true,
     ];
 
     register_post_type( 'collection', $args );

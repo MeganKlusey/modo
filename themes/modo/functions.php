@@ -55,6 +55,7 @@
 				'view_item'     => 'View Exhibition',
 				'all_items'     => 'All Exhibitions'
 			],
+			'public' => true,
 			'has_archive' => true,
 			'supports' => ['title', 'editor', 'author', 'thumbnail', 'excerpt'],
 			'menu_icon' => 'dashicons-tickets',

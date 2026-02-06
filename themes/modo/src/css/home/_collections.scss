@@ -1,2 +1,31 @@
 .collections {
+  .wrapper-padding {
+    padding: var(--p-large) var(--xxlarge);
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 6.5rem;
+      max-width: 80rem;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  &__overview {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--xxhuge);
+  }
+
+  &__title {
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  &__text {
+    max-width: 45.5rem;
+    width: auto;
+    text-wrap: pretty;
+  }
 }

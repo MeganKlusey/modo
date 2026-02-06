@@ -1,49 +1,49 @@
-	<section class="exhibitions">
-		<div class="wrapper-padding">
-			<div class="wrapper">
-				<div class="exhibitions__left">
-					<h2 class="text-xs">Gallery exhibitions</h2>
-					<div class="exhibitions__images">
-						<?php
-							$args = array(
-								'post_type' => 'exhibition',
-								'posts_per_page' => 4,
-								'order' => "ASC"
-							);
-							$query = new WP_Query( $args );
-							
-							if ( $query->have_posts() ) :
-							while ( $query->have_posts() ) : $query->the_post(); ?>
-						<img src="<?= get_the_post_thumbnail_url(); ?>" alt="" class="image exhibitions__image" />
-						<?php
-							endwhile;
-							wp_reset_postdata();
-							endif; ?>
-					</div>
-				</div>
-				<div class="exhibitions__right">
-					<ul class="exhibitions__list">
-						<?php
-							$args = array(
-								'post_type' => 'exhibition',
-								'posts_per_page' => 4,
-								'order' => "ASC"
-							);
-							$query = new WP_Query( $args );
-							
-							if ( $query->have_posts() ) :
-							while ( $query->have_posts() ) : $query->the_post(); ?>
-						<li class="text-5xl exhibitions__item"><a href=""><?php the_title(); ?></a></li>
-						<?php
-							endwhile;
-							wp_reset_postdata();
-							endif;
-						?>
-					</ul>
-					<a href="#" class="exhibitions__link text-xs">
-						<? get_template_part("src/inc/icons/bullet-point") ?>Get tickets
-					</a>
+<section class="exhibitions">
+	<div class="wrapper-padding">
+		<div class="wrapper">
+			<div class="exhibitions__left">
+				<h2 class="text-xs">Gallery exhibitions</h2>
+				<div class="exhibitions__images">
+					<?php
+						$args = array(
+							'post_type' => 'exhibition',
+							'posts_per_page' => 4,
+							'order' => "ASC"
+						);
+						$query = new WP_Query( $args );
+						
+						if ( $query->have_posts() ) :
+						while ( $query->have_posts() ) : $query->the_post(); ?>
+					<img src="<?= get_the_post_thumbnail_url(); ?>" alt="" class="image exhibitions__image" />
+					<?php
+						endwhile;
+						wp_reset_postdata();
+						endif; ?>
 				</div>
 			</div>
+			<div class="exhibitions__right">
+				<ul class="exhibitions__list">
+					<?php
+						$args = array(
+							'post_type' => 'exhibition',
+							'posts_per_page' => 4,
+							'order' => "ASC"
+						);
+						$query = new WP_Query( $args );
+						
+						if ( $query->have_posts() ) :
+						while ( $query->have_posts() ) : $query->the_post(); ?>
+					<li class="text-5xl exhibitions__item"><a href=""><?php the_title(); ?></a></li>
+					<?php
+						endwhile;
+						wp_reset_postdata();
+						endif;
+					?>
+				</ul>
+				<a href="#" class="exhibitions__link text-xs">
+					<? get_template_part("src/inc/icons/bullet-point") ?>Get tickets
+				</a>
+			</div>
 		</div>
-	</section>
+	</div>
+</section>

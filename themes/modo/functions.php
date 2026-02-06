@@ -63,5 +63,27 @@
 
     register_post_type( 'exhibition', $args );
 	}
-
 	add_action( 'init', 'exhibitions_post_type' );
+
+	function collections_post_type() {
+		$args = [
+			'labels' => [
+				'name'          => 'Collections',
+				'singular_name' => 'Collection',
+				'menu_name'     => 'Collections',
+				'add_new'       => 'Add New Collection',
+				'add_new_item'  => 'Add New Collection',
+				'new_item'      => 'New Collection',
+				'edit_item'     => 'Edit Collection',
+				'view_item'     => 'View Collection',
+				'all_items'     => 'All Collections'
+			],
+			'public' => true,
+			'has_archive' => true,
+			'supports' => ['title', 'editor', 'author', 'thumbnail', 'excerpt'],
+			'menu_icon' => 'dashicons-portfolio',
+    ];
+
+    register_post_type( 'collection', $args );
+	}
+	add_action( 'init', 'collections_post_type' );

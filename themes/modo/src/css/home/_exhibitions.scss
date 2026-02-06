@@ -2,8 +2,7 @@
   position: relative;
 
   .wrapper-padding {
-    padding-inline: var(--xxlarge);
-    padding-top: var(--p-large);
+    padding: var(--p-large) var(--xxlarge);
 
     .wrapper {
       display: flex;

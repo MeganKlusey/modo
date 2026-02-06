@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
   items.forEach((item, itemIndex) => {
     item.addEventListener("mouseenter", () => {
       items.forEach((i) => {
+        i.style.transitionProperty = "opacity";
         i.style.transitionDuration = "0.4s";
         i.classList.remove("active");
       });

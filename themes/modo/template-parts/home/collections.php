@@ -9,7 +9,7 @@
 						art through objects that have shaped the world.</p>
 				</div>
 			</div>
-			<div class="collections__images">
+			<ul class="collections__images">
 				<?php 
 					$args = [
 						'post_type' => 'collection',
@@ -20,14 +20,18 @@
 
 					if ( $query->have_posts() ) :
 					while ( $query->have_posts() ) : $query->the_post(); ?>
-				<div>
-					<img src="" alt="" class="" />
-				</div>
+				<li class="collections__item">
+					<img src="<?= get_the_post_thumbnail_url(); ?>" alt="" class="image collections__item-image" />
+					<div class="collections__item-info">
+						<p class="collections__item-title"><?php the_title(); ?></p>
+						<p class="collections__item-date"></p>
+					</div>
+				</li>
 				<?php 
 					endwhile;
 					wp_reset_postdata();
-				endif; ?>
-			</div>
+					endif; ?>
+			</ul>
 		</div>
 	</div>
 </section>

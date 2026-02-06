@@ -28,4 +28,34 @@
     width: auto;
     text-wrap: pretty;
   }
+
+  &__images {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__item-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--small);
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  &__item-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__item-title {
+    text-transform: uppercase;
+  }
 }

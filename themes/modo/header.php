@@ -15,11 +15,11 @@
 			<a href="<?= get_home_url(); ?>" class="text-xs">Modo Museum</a>
 			<nav>
 				<?php
-					wp_nav_menu(array(
+					wp_nav_menu([
 						"menu" => "Primary Menu",
 						"container" => "false",
 						"link_class" => "text-xs"
-					));
+					]);
 				?>
 			</nav>
 			<p class="text-xs">LA, California</p>

@@ -27,9 +27,9 @@
 
 	// Menus
 	function modo_register_menus() {
-    register_nav_menus( array(
+    register_nav_menus([
 			'primary-menu' => __('Primary Menu', 'modo'),
-    ));
+    ]);
 	}
 	add_action('init', 'modo_register_menus');
 

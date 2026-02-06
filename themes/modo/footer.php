@@ -15,11 +15,11 @@
 				<div class="links__left">
 					<nav>
 						<?php
-									wp_nav_menu(array(
+									wp_nav_menu([
 										"menu" => "Primary Menu",
 										"container" => "false",
 										"link_class" => "text-xs"
-									));
+									]);
 								?>
 					</nav>
 					<ul class="links__offsite">

@@ -5,11 +5,11 @@
 				<h2 class="text-xs">Gallery exhibitions</h2>
 				<div class="exhibitions__images">
 					<?php
-						$args = array(
+						$args = [
 							'post_type' => 'exhibition',
 							'posts_per_page' => 4,
 							'order' => "ASC"
-						);
+						];
 						$query = new WP_Query( $args );
 						
 						if ( $query->have_posts() ) :
@@ -24,11 +24,11 @@
 			<div class="exhibitions__right">
 				<ul class="exhibitions__list">
 					<?php
-						$args = array(
+						$args = [
 							'post_type' => 'exhibition',
 							'posts_per_page' => 4,
 							'order' => "ASC"
-						);
+						];
 						$query = new WP_Query( $args );
 						
 						if ( $query->have_posts() ) :

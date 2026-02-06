@@ -89,3 +89,27 @@
     register_post_type( 'collection', $args );
 	}
 	add_action( 'init', 'collections_post_type' );
+
+	function testimonials_post_type() {
+		$args = [
+			'labels' => [
+				'name'          => 'Testimonials',
+				'singular_name' => 'Testimonial',
+				'menu_name'     => 'Testimonials',
+				'add_new'       => 'Add New Testimonial',
+				'add_new_item'  => 'Add New Testimonial',
+				'new_item'      => 'New Testimonial',
+				'edit_item'     => 'Edit Testimonial',
+				'view_item'     => 'View Testimonial',
+				'all_items'     => 'All Testimonials'
+			],
+			'public' => true,
+			'has_archive' => true,
+			'supports' => ['title', 'editor', 'author', 'thumbnail', 'excerpt'],
+			'menu_icon' => 'dashicons-testimonial',
+			'show_in_rest' => true,
+    ];
+
+    register_post_type( 'testimonial', $args );
+	}
+	add_action( 'init', 'testimonials_post_type' );

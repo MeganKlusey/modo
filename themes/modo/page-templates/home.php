@@ -7,6 +7,7 @@
 	<?php get_template_part('template-parts/home/hero'); ?>
 	<?php get_template_part('template-parts/home/about'); ?>
 	<?php get_template_part('template-parts/home/exhibitions'); ?>
+	<?php get_template_part('template-parts/home/collections'); ?>
 </main>
 
 <?php get_footer(); ?>

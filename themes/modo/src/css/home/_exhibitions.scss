@@ -35,8 +35,9 @@
     overflow: hidden;
 
     .image {
-      object-fit: contain;
+      object-fit: cover;
       position: relative;
+      height: inherit;
       width: 100%;
       display: block;
       transition-duration: 0.4s;

@@ -59,6 +59,7 @@
 			'has_archive' => true,
 			'supports' => ['title', 'editor', 'author', 'thumbnail', 'excerpt'],
 			'menu_icon' => 'dashicons-tickets',
+			'show_in_rest' => true,
     ];
 
     register_post_type( 'exhibition', $args );

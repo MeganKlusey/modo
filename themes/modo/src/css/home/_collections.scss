@@ -1,11 +1,11 @@
 .collections {
   .wrapper-padding {
     padding: var(--p-large) var(--xxlarge);
+    gap: 6.5rem;
 
     .wrapper {
       display: flex;
       flex-direction: column;
-      gap: 6.5rem;
       max-width: 80rem;
       width: 100%;
       margin: 0 auto;

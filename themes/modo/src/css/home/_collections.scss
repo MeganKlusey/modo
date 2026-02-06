@@ -39,7 +39,8 @@
   }
 
   &__item {
-    position: relative;
+    position: sticky;
+    top: var(--xxlarge);
 
     .gradient {
       background: linear-gradient(transparent 80%, rgba(transparent, 0.4));

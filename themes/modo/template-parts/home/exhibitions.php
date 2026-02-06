@@ -8,7 +8,7 @@
 						$args = [
 							'post_type' => 'exhibition',
 							'posts_per_page' => 4,
-							'order' => "ASC"
+							'order' => 'ASC'
 						];
 						$query = new WP_Query( $args );
 						
@@ -27,7 +27,7 @@
 						$args = [
 							'post_type' => 'exhibition',
 							'posts_per_page' => 4,
-							'order' => "ASC"
+							'order' => 'ASC'
 						];
 						$query = new WP_Query( $args );
 						

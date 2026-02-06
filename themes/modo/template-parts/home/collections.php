@@ -12,9 +12,9 @@
 			<div class="collections__images">
 				<?php 
 					$args = [
-						"post_type" => "collection",
-						"posts_per_page" => 4,
-						"order" => "ASC"
+						'post_type' => 'collection',
+						'posts_per_page' => 4,
+						'order' => 'ASC'
 					];
 					$query = new WP_Query($args);
 

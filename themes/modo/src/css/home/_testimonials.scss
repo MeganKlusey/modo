@@ -41,11 +41,21 @@
     }
   }
 
-  &__info {
+  &__right {
     display: flex;
     flex-direction: column;
     gap: var(--xxlarge);
     flex-basis: 50%;
+  }
+
+  &__info {
+    display: none;
+    flex-direction: column;
+    gap: var(--xxlarge);
+
+    &.active {
+      display: flex;
+    }
   }
 
   &__author {
@@ -72,6 +82,10 @@
 
     &.active {
       opacity: 1;
+    }
+
+    &:hover {
+      cursor: pointer;
     }
   }
 

@@ -68,6 +68,11 @@
     border: 1px solid var(--white);
     overflow: hidden;
     object-fit: contain;
+    opacity: 0.4;
+
+    &.active {
+      opacity: 1;
+    }
   }
 
   &__item-image {

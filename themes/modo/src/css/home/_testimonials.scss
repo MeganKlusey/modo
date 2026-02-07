@@ -1,11 +1,17 @@
 .testimonials {
+  height: auto;
+
   .wrapper-padding {
     padding: var(--p-large) var(--xxlarge);
+    height: auto;
+    box-sizing: border-box;
 
     .wrapper {
       display: flex;
       flex-direction: column;
       max-width: 80rem;
+      min-height: 37.5rem;
+      height: 50%;
       width: 100%;
       margin: 0 auto;
       gap: 3rem;
@@ -19,12 +25,14 @@
 
   &__wrapper {
     display: flex;
+    flex: 1;
     gap: 3rem;
+    height: 100%;
   }
 
   &__images {
     display: flex;
-    height: inherit;
+    height: auto;
     width: auto;
     position: relative;
     overflow: hidden;
@@ -34,7 +42,6 @@
       object-fit: cover;
       position: relative;
       height: 100%;
-      max-height: calc(100vh - (var(--xxlarge) * 2));
       width: 100%;
       display: block;
       transition-duration: 0.4s;

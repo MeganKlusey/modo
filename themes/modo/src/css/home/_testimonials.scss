@@ -3,6 +3,8 @@
     padding: var(--p-large) var(--xxlarge);
 
     .wrapper {
+      display: flex;
+      flex-direction: column;
       max-width: 80rem;
       width: 100%;
       margin: 0 auto;
@@ -26,6 +28,7 @@
     width: auto;
     position: relative;
     overflow: hidden;
+    flex-basis: 50%;
 
     .image {
       object-fit: cover;
@@ -38,11 +41,13 @@
   }
 
   &__info {
-  }
-
-  &__quote {
+    display: flex;
+    flex-direction: column;
+    gap: var(--xxlarge);
+    flex-basis: 50%;
   }
 
   &__author {
+    color: var(--grey-200);
   }
 }

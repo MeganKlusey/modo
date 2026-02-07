@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const diff = itemIndex - lastActiveIndex;
 
       images.forEach((image) => {
-        image.style.transform = `translateX(-${width * diff}px)`;
+        image.style.transform = `translateX(-${container.offsetWidth * diff}px)`;
       });
 
       info.forEach((i) => {

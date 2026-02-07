@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const items = document.querySelectorAll(".exhibitions__item");
-  const images = document.querySelectorAll(".exhibitions__image");
   const container = document.querySelector(".exhibitions__images");
+  const images = document.querySelectorAll(".exhibitions__image");
+  const items = document.querySelectorAll(".exhibitions__item");
 
   let height = images[0].offsetHeight;
   let lastActiveIndex = 0;

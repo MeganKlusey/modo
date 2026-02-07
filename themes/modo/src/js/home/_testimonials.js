@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const items = document.querySelectorAll(".testimonials__item");
-  const images = document.querySelectorAll(".testimonials__image");
   const container = document.querySelector(".testimonials__images");
+  const images = document.querySelectorAll(".testimonials__image");
   const info = document.querySelectorAll(".testimonials__info");
+  const items = document.querySelectorAll(".testimonials__item");
 
   let activeIndex = 0;
   let lastActiveIndex = 0;

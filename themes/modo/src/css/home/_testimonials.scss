@@ -1,2 +1,48 @@
 .testimonials {
+  .wrapper-padding {
+    padding: var(--p-large) var(--xxlarge);
+
+    .wrapper {
+      max-width: 80rem;
+      width: 100%;
+      margin: 0 auto;
+      gap: 3rem;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 3rem;
+    flex-basis: 1 1;
+  }
+
+  &__images {
+    height: auto;
+    width: auto;
+    position: relative;
+    overflow: hidden;
+
+    .image {
+      object-fit: cover;
+      position: relative;
+      height: inherit;
+      width: 100%;
+      display: block;
+      transition-duration: 0.4s;
+    }
+  }
+
+  &__info {
+  }
+
+  &__quote {
+  }
+
+  &__author {
+  }
 }

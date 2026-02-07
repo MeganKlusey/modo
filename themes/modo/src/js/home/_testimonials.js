@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const info = document.querySelectorAll(".testimonials__info");
   const items = document.querySelectorAll(".testimonials__item");
 
+  let rafId = null;
   let activeIndex = 0;
   let lastActiveIndex = 0;
   let width = images[0].offsetWidth;
@@ -31,12 +32,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  function updateSlider() {
+  function updateSlider(noAnimation = false) {
     const width = container.offsetWidth;
     images.forEach((image) => {
+      image.style.transitionDuration = noAnimation ? "0s" : "0.4s";
       image.style.transform = `translateX(-${width * activeIndex}px)`;
     });
   }
 
-  window.addEventListener("resize", () => updateSlider());
+  window.addEventListener("resize", () => {
+    updateSlider(true);
+    cancelAnimationFrame(rafId);
+    rafId = requestAnimationFrame(() => updateSlider(false));
+  });
 });

@@ -7,8 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
   let rafId = null;
   let activeIndex = 0;
   let lastActiveIndex = 0;
-  let width = images[0].offsetWidth;
-  container.style.width = `${width}px`;
 
   items[0].classList.add("active");
   images[0].classList.add("active");

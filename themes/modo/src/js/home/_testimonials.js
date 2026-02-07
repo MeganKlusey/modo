@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   items.forEach((item, itemIndex) => {
     item.addEventListener("click", () => {
-      activeIndex = itemIndex;
       const diff = itemIndex - lastActiveIndex;
+      activeIndex = itemIndex;
 
       items.forEach((i) => {
         i.style.transitionProperty = "opacity";

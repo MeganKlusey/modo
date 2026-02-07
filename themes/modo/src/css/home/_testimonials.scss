@@ -33,7 +33,8 @@
     .image {
       object-fit: cover;
       position: relative;
-      height: inherit;
+      height: 100%;
+      max-height: calc(100vh - (var(--xxlarge) * 2));
       width: 100%;
       display: block;
       transition-duration: 0.4s;

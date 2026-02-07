@@ -20,11 +20,11 @@
   &__wrapper {
     display: flex;
     gap: 3rem;
-    flex-basis: 1 1;
   }
 
   &__images {
-    height: auto;
+    display: flex;
+    height: inherit;
     width: auto;
     position: relative;
     overflow: hidden;
@@ -50,5 +50,29 @@
 
   &__author {
     color: var(--grey-200);
+  }
+
+  &__list {
+    display: flex;
+    gap: var(--base);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    position: relative;
+    border-radius: 3rem;
+    height: 3rem;
+    width: 3rem;
+    border: 1px solid var(--white);
+    overflow: hidden;
+    object-fit: contain;
+  }
+
+  &__item-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }

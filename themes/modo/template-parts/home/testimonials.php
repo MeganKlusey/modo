@@ -31,6 +31,20 @@
 						wp_reset_postdata();
 						endif;
 					?>
+					<ul class="testimonials__list">
+						<?php
+							if ( $query->have_posts() ) :
+							while ( $query->have_posts() ) : $query->the_post();
+						?>
+						<li class="testimonials__item">
+							<img src="<?= get_the_post_thumbnail_url(); ?>" alt="" class="testimonials__item-image" />
+						</li>
+						<?php
+							endwhile;
+							wp_reset_postdata();
+							endif;
+						?>
+					</ul>
 				</div>
 			</div>
 		</div>

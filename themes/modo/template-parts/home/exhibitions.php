@@ -23,14 +23,7 @@
 			</div>
 			<div class="exhibitions__right">
 				<ul class="exhibitions__list">
-					<?php
-						$args = [
-							'post_type' => 'exhibition',
-							'posts_per_page' => 4,
-							'order' => 'ASC'
-						];
-						$query = new WP_Query( $args );
-						
+					<?php						
 						if ( $query->have_posts() ) :
 						while ( $query->have_posts() ) : $query->the_post(); ?>
 					<li class="text-5xl exhibitions__item"><a href=""><?php the_title(); ?></a></li>

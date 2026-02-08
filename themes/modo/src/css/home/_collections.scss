@@ -43,6 +43,12 @@
     top: var(--xxlarge);
     height: calc(100vh - (var(--xxlarge) * 2));
 
+    &:not(:last-of-type) {
+      animation: scale both;
+      animation-timeline: view();
+      animation-range: entry 110% cover calc(400vh - (var(--xxlarge) * 2));
+    }
+
     .gradient {
       background: linear-gradient(transparent 80%, rgba(transparent, 0.4));
       position: absolute;
@@ -86,13 +92,16 @@
 @keyframes scale {
   0% {
     transform: scale(1);
-    filter: brightness(1);
   }
   10% {
     transform: scale(1);
     filter: brightness(1);
   }
   55% {
+    transform: scale(0.95);
+    filter: brightness(0);
+  }
+  100% {
     transform: scale(0.95);
     filter: brightness(0);
   }

@@ -39,7 +39,8 @@
 								while ( $query->have_posts() ) : $query->the_post();
 							?>
 						<li class="testimonials__item">
-							<img src="<?= get_the_post_thumbnail_url(); ?>" alt="" class="testimonials__item-image" />
+							<button><img src="<?= get_the_post_thumbnail_url(); ?>" alt=""
+									class="testimonials__item-image" /></button>
 						</li>
 						<?php
 								endwhile;

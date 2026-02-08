@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
   let rafId = null;
   let height = 0;
   let activeIndex = 0;
-  let resizeTimeout;
 
   items[0].classList.add("active");
   images[0].classList.add("active");

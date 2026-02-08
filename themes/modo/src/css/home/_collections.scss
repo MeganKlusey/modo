@@ -43,10 +43,12 @@
     top: var(--xxlarge);
     height: calc(100vh - (var(--xxlarge) * 2));
 
-    &:not(:last-of-type) {
-      animation: scale both;
-      animation-timeline: view();
-      animation-range: entry 110% cover calc(400vh - (var(--xxlarge) * 2));
+    @supports (animation-timeline: view()) {
+      &:not(:last-of-type) {
+        animation: scale both;
+        animation-timeline: view();
+        animation-range: entry 110% cover calc(400vh - (var(--xxlarge) * 2));
+      }
     }
 
     .gradient {

@@ -44,7 +44,9 @@
       height: 100%;
       width: 100%;
       display: block;
+      transition-property: transform;
       transition-duration: 0.4s;
+      flex-shrink: 0;
     }
   }
 

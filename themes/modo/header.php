@@ -12,7 +12,7 @@
 <body <?php body_class(); ?>>
 	<header>
 		<div class="menu__container">
-			<a href="<?= get_home_url(); ?>" class="text-xs">Modo Museum</a>
+			<a href="<?= get_home_url(); ?>" class="text-xs"><?= get_bloginfo("name") ?></a>
 			<nav>
 				<?php
 					wp_nav_menu([

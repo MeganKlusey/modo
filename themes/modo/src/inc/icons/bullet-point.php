@@ -1,1 +1,3 @@
-<div class="bullet-point"></div>
+<svg class="bullet-point" xmlns="http://www.w3.org/2000/svg">
+	<rect />
+</svg>

@@ -1,5 +1,10 @@
 .bullet-point {
-  background-color: var(--white);
+  fill: var(--white);
   width: var(--xxsmall);
   height: var(--xxsmall);
+
+  rect {
+    width: var(--xxsmall);
+    height: var(--xxsmall);
+  }
 }

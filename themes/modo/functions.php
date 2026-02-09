@@ -1,10 +1,10 @@
 <?php
 	// Vite - dev and prod
 	add_action('wp_enqueue_scripts', function () {
-		if (@file_get_contents("http://localhost:5173/@vite/client")) {
+		if (@file_get_contents("http://localhost:5174/@vite/client")) {
 			echo '<style>html { visibility: hidden; }</style>';
-			wp_enqueue_script('vite-client', "http://localhost:5173/@vite/client", [], null, false);
-			wp_enqueue_script('modo-js', "http://localhost:5173/src/js/main.js", [], null, true);
+			wp_enqueue_script('vite-client', "http://localhost:5174/@vite/client", [], null, false);
+			wp_enqueue_script('modo-js', "http://localhost:5174/src/js/main.js", [], null, true);
 			add_filter('script_loader_tag', function ($tag, $handle) {
 				if ($handle === 'vite-client' || $handle === 'modo-js') {
 					return str_replace('<script ', '<script type="module" ', $tag);

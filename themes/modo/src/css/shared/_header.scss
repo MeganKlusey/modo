@@ -4,19 +4,52 @@ header {
   width: 100%;
   box-sizing: border-box;
 
-  .menu__container {
+  .menu__wrapper {
     display: flex;
     justify-content: space-between;
     padding: var(--xlarge) var(--xxlarge);
     text-transform: uppercase;
     font-size: var(--textxs);
 
-    .menu {
-      margin: 0;
-      padding: 0;
-      display: flex;
-      list-style-type: none;
-      gap: var(--xxlarge);
+    .hamburger-wrapper {
+      background-color: var(--white);
+      border: none;
+      height: 2.5rem;
+      width: 2.5rem;
+      padding: 0 var(--xsmall);
+      cursor: pointer;
+    }
+
+    nav {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+
+      @media screen and (min-width: 1024px) {
+        display: block;
+      }
+
+      .menu {
+        margin: 0;
+        padding: 0;
+        display: none;
+        list-style-type: none;
+        gap: var(--xxlarge);
+
+        @media screen and (min-width: 1024px) {
+          display: flex;
+        }
+      }
+    }
+
+    .location {
+      display: none;
+
+      @media screen and (min-width: 1024px) {
+        display: block;
+      }
     }
   }
 }

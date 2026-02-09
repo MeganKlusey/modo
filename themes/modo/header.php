@@ -11,8 +11,11 @@
 
 <body <?php body_class(); ?>>
 	<header>
-		<div class="menu__container">
+		<div class="menu__wrapper">
 			<a href="<?= get_home_url(); ?>" class="text-xs"><?= get_bloginfo("name") ?></a>
+			<button class="hamburger-wrapper">
+				<? get_template_part("src/inc/icons/hamburger") ?>
+			</button>
 			<nav>
 				<?php
 					wp_nav_menu([
@@ -22,6 +25,6 @@
 					]);
 				?>
 			</nav>
-			<p class="text-xs">LA, California</p>
+			<p class="location text-xs">LA, California</p>
 		</div>
 	</header>

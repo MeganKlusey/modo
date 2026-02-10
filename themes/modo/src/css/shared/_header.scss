@@ -18,6 +18,11 @@ header {
       width: 2.5rem;
       padding: 0 var(--xsmall);
       cursor: pointer;
+      display: block;
+
+      @media screen and (min-width: 1024px) {
+        display: none;
+      }
     }
 
     nav {
@@ -25,21 +30,29 @@ header {
 
       &.active {
         display: block;
+        position: absolute;
+        background-color: var(--black);
+        z-index: 1;
+        width: 200px;
       }
 
       @media screen and (min-width: 1024px) {
         display: block;
+        position: relative;
       }
 
       .menu {
         margin: 0;
         padding: 0;
-        display: none;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
         list-style-type: none;
         gap: var(--xxlarge);
 
         @media screen and (min-width: 1024px) {
           display: flex;
+          flex-direction: row;
         }
       }
     }

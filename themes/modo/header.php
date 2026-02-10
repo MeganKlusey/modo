@@ -16,7 +16,7 @@
 			<button class="hamburger-button">
 				<? get_template_part("src/inc/icons/hamburger") ?>
 			</button>
-			<nav>
+			<nav class="header-nav">
 				<?php
 					wp_nav_menu([
 						"menu" => "Primary Menu",

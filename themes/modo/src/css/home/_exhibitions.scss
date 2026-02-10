@@ -11,8 +11,12 @@
       gap: var(--xxhuge);
       display: flex;
       max-width: 80rem;
-      min-height: 37.5rem;
+      min-height: auto;
       width: 100%;
+
+      @media screen and (min-width: 1024px) {
+        min-height: 37.5rem;
+      }
     }
   }
 

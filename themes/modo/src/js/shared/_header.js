@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function openMobileMenu() {
     const width = window.innerWidth;
 
-    if (width >= 1024) {
+    if (width >= 768) {
       hamburger.classList.remove("active");
       nav.classList.remove("active");
     }

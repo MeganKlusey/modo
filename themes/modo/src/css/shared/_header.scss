@@ -9,7 +9,6 @@ header {
     justify-content: space-between;
     padding: var(--xlarge) var(--xxlarge);
     text-transform: uppercase;
-    font-size: var(--textxs);
 
     .hamburger-button {
       background-color: var(--white);
@@ -20,7 +19,7 @@ header {
       cursor: pointer;
       display: block;
 
-      @media screen and (min-width: 1024px) {
+      @media screen and (min-width: 768px) {
         display: none;
       }
     }
@@ -36,7 +35,7 @@ header {
         width: 200px;
       }
 
-      @media screen and (min-width: 1024px) {
+      @media screen and (min-width: 768px) {
         display: block;
         position: relative;
       }
@@ -50,7 +49,7 @@ header {
         list-style-type: none;
         gap: var(--xxlarge);
 
-        @media screen and (min-width: 1024px) {
+        @media screen and (min-width: 768px) {
           display: flex;
           flex-direction: row;
         }
@@ -60,7 +59,7 @@ header {
     .location {
       display: none;
 
-      @media screen and (min-width: 1024px) {
+      @media screen and (min-width: 768px) {
         display: block;
       }
     }

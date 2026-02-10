@@ -210,4 +210,8 @@ a {
   text-transform: uppercase;
   display: flex;
   width: fit-content;
+
+  &:focus-visible {
+    outline: none;
+  }
 }

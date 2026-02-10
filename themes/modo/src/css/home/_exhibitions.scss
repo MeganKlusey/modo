@@ -6,16 +6,22 @@
 
     .wrapper {
       display: flex;
+      flex-direction: column;
       justify-content: space-between;
       margin: 0 auto;
-      gap: var(--xxhuge);
+      gap: var(--xxlarge);
       display: flex;
       max-width: 80rem;
       min-height: auto;
       width: 100%;
 
+      @media screen and (min-width: 768px) {
+        flex-direction: row;
+      }
+
       @media screen and (min-width: 1024px) {
         min-height: 37.5rem;
+        gap: var(--xxhuge);
       }
     }
   }
@@ -24,7 +30,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 25rem;
+    gap: var(--xxlarge);
+
+    @media screen and (min-width: 768px) {
+      width: 25rem;
+    }
 
     h2 {
       text-transform: uppercase;
@@ -50,7 +60,11 @@
   &__right {
     display: flex;
     flex-direction: column;
-    gap: 6.25rem;
+    gap: var(--xxhuge);
+
+    @media screen and (min-width: 768px) {
+      gap: 6.25rem;
+    }
 
     ul {
       display: flex;

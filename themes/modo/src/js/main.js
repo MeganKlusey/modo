@@ -1,4 +1,5 @@
 import "../css/main.scss";
+import "./shared/_header";
 import "./shared/_footer";
 import "./home/_exhibitions";
 import "./home/_collections";

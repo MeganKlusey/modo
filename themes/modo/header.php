@@ -13,7 +13,7 @@
 	<header>
 		<div class="menu__wrapper">
 			<a href="<?= get_home_url(); ?>" class="text-xs"><?= get_bloginfo("name") ?></a>
-			<button class="hamburger-wrapper">
+			<button class="hamburger-button">
 				<? get_template_part("src/inc/icons/hamburger") ?>
 			</button>
 			<nav>

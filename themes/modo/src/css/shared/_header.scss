@@ -29,10 +29,18 @@ header {
 
       &.active {
         display: block;
+        box-sizing: border-box;
         position: absolute;
         background-color: var(--black);
         z-index: 1;
         width: 200px;
+        right: var(--xlarge);
+        top: 100%;
+        padding: var(--base) var(--huge) var(--xxlarge);
+
+        menu {
+          gap: var(--xlarge);
+        }
       }
 
       @media screen and (min-width: 768px) {

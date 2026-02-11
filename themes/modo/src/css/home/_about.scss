@@ -2,12 +2,13 @@
   position: relative;
 
   .wrapper-padding {
-    padding-inline: var(--xxlarge);
+    padding-inline: var(--base);
     position: relative;
     padding-bottom: 6rem;
 
     @media screen and (min-width: 768px) {
       padding-bottom: 7.5rem;
+      padding-inline: var(--xxlarge);
     }
 
     .wrapper {

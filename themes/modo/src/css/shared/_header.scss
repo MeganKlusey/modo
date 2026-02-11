@@ -7,8 +7,12 @@ header {
   .menu__wrapper {
     display: flex;
     justify-content: space-between;
-    padding: var(--xlarge) var(--xxlarge);
+    padding: var(--xlarge) var(--base);
     text-transform: uppercase;
+
+    @media screen and (min-width: 768px) {
+      padding: var(--xlarge) var(--xxlarge);
+    }
 
     .hamburger-button {
       background-color: var(--white);

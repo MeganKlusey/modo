@@ -1,9 +1,13 @@
 .collections {
   .wrapper-padding {
-    padding: var(--p-large) var(--xxlarge);
+    padding: var(--p-large) var(--base);
     gap: 6.5rem;
     display: flex;
     flex-direction: column;
+
+    @media screen and (min-width: 768px) {
+      padding: var(--p-large) var(--xxlarge);
+    }
 
     .wrapper {
       max-width: 80rem;

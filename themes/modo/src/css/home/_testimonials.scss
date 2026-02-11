@@ -2,9 +2,13 @@
   height: auto;
 
   .wrapper-padding {
-    padding: var(--p-large) var(--xxlarge);
+    padding: var(--p-large) var(--base);
     height: auto;
     box-sizing: border-box;
+
+    @media screen and (min-width: 768px) {
+      padding: var(--p-large) var(--xxlarge);
+    }
 
     .wrapper {
       display: flex;

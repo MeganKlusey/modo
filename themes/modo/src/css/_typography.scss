@@ -178,7 +178,11 @@ h6 {
   letter-spacing: 0;
   line-height: 1.2;
 
-  @media only screen and (orientation: landscape) and (max-width: 767px) {
+  @media only screen and (orientation: landscape) {
+    font-size: var(--xxxlarge);
+  }
+
+  @media only screen and (max-width: 767px) {
     font-size: var(--xxxlarge);
   }
 

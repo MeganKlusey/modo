@@ -61,12 +61,8 @@
     padding-top: 50vh;
     display: flex;
     flex-direction: column;
-    padding-bottom: 8rem;
+    padding-bottom: 10rem;
     overflow-x: hidden;
-
-    @media screen and (min-width: 768px) {
-      padding-bottom: 10rem;
-    }
 
     @media screen and (min-width: 1024px) {
       padding-bottom: 14rem;
@@ -155,7 +151,10 @@
         max-width: 20rem;
         align-self: end;
         margin-top: 20rem;
-        margin-right: 1rem;
+
+        @media screen and (min-width: 768px) {
+          margin-right: 1rem;
+        }
       }
     }
   }

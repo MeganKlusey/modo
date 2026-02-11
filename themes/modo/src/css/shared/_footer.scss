@@ -12,10 +12,14 @@ footer {
     .wrapper {
       display: flex;
       flex-direction: column;
-      gap: 6.5rem;
+      gap: var(--xxhuge);
       max-width: 80rem;
       width: 100%;
       margin: 0 auto;
+
+      @media screen and (min-width: 768px) {
+        gap: 6.5rem;
+      }
 
       .case-studies {
         display: flex;
@@ -64,7 +68,20 @@ footer {
 
         &__left {
           display: flex;
-          gap: 12.5rem;
+          gap: 0;
+
+          @media screen and (min-width: 1024px) {
+            gap: 12.5rem;
+          }
+        }
+
+        nav,
+        &__offsite {
+          flex-basis: 50%;
+
+          @media screen and (min-width: 1024px) {
+            flex-basis: auto;
+          }
         }
 
         .menu,
@@ -74,7 +91,11 @@ footer {
           display: flex;
           flex-direction: column;
           list-style-type: none;
-          gap: var(--huge);
+          gap: var(--xxlarge);
+
+          @media screen and (min-width: 767px) {
+            gap: var(--huge);
+          }
 
           li {
             opacity: 0.8;

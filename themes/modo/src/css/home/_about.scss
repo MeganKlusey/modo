@@ -31,11 +31,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: var(--xxhuge);
+    gap: var(--xxlarge);
     max-width: 45.5rem;
     width: 100%;
     margin: 0 auto;
     mix-blend-mode: difference;
+
+    @media screen and (min-width: 768px) {
+      gap: var(--huge);
+    }
+
+    @media screen and (min-width: 1024px) {
+      gap: var(--xxhuge);
+    }
 
     h2 {
       text-transform: uppercase;

@@ -82,30 +82,73 @@
 
       &-1 {
         height: 100%;
-        max-width: 11.25rem;
-        margin-top: 5rem;
+        max-width: 8rem;
+
+        @media screen and (min-width: 1024px) {
+          max-width: 11.25rem;
+          margin-top: 5rem;
+        }
       }
 
       &-2 {
-        max-width: 28.75rem;
+        max-width: 18rem;
+        margin-top: 20rem;
+
+        @media screen and (min-width: 1024px) {
+          max-width: 24rem;
+          margin-top: 10rem;
+        }
+
+        @media screen and (min-width: 1024px) {
+          max-width: 28.75rem;
+          margin-top: 0;
+        }
       }
 
       &-3 {
-        max-width: 18rem;
-        margin-left: 4rem;
-        margin-top: 20rem;
+        max-width: 16rem;
+        margin-top: 18rem;
+
+        @media screen and (min-width: 768px) {
+          margin-left: 2rem;
+        }
+
+        @media screen and (min-width: 1024px) {
+          max-width: 18rem;
+          margin-left: 4rem;
+          margin-top: 20rem;
+        }
       }
 
       &-4 {
-        max-width: 32.5rem;
+        max-width: 20rem;
         align-self: end;
-        margin-top: 20rem;
-        margin-right: 1rem;
+        margin-top: 18rem;
+
+        @media screen and (min-width: 768px) {
+          max-width: 28rem;
+          margin-top: 18rem;
+          margin-right: 1rem;
+        }
+
+        @media screen and (min-width: 1024px) {
+          max-width: 32.5rem;
+          margin-top: 20rem;
+        }
       }
 
       &-5 {
-        max-width: 30rem;
-        margin-top: 20rem;
+        max-width: 16rem;
+        margin-top: 18rem;
+
+        @media screen and (min-width: 768px) {
+          max-width: 22rem;
+          margin-top: 20rem;
+        }
+
+        @media screen and (min-width: 1024px) {
+          max-width: 30rem;
+        }
       }
 
       &-6 {

@@ -2,17 +2,26 @@
   height: 100vh;
   position: relative;
 
-  .wrapper {
-    width: 100%;
-    padding: var(--xhuge) var(--base);
-    box-sizing: border-box;
+  .wrapper-padding {
     position: absolute;
-    inset: 0;
-    display: flex;
-    justify-content: space-between;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: var(--xhuge) var(--base);
 
     @media screen and (min-width: 768px) {
       padding: var(--xhuge) var(--xxlarge);
+    }
+
+    .wrapper {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      inset: 0;
+      display: flex;
+      justify-content: flex-end;
     }
   }
 
@@ -28,6 +37,9 @@
     flex-direction: column;
     justify-content: end;
     height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
 
     ul {
       padding: 0;
@@ -64,7 +76,11 @@
   &__description {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: var(--base);
     width: 18.5rem;
+
+    @media screen and (min-width: 1024px) {
+      gap: 1.5rem;
+    }
   }
 }

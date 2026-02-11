@@ -19,7 +19,7 @@ h1 {
   letter-spacing: -0.04em;
   line-height: 0.8;
 
-  @media only screen and (orientation: landscape) and (max-width: 767px) {
+  @media only screen and (orientation: landscape) {
     font-size: 6rem;
   }
 

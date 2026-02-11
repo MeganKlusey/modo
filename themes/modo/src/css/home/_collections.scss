@@ -57,10 +57,12 @@
 
     @for $i from 1 through 3 {
       &:nth-child(3n + #{$i}) {
+        height: calc(100vh - (var(--xxlarge) * 4));
+
         @if $i == 1 {
           top: var(--xxlarge);
         } @else {
-          top: calc(#{$i - 1} * var(--xxlarge) + 16px);
+          top: calc(var(--xxlarge) + #{($i - 1) * 16px});
         }
       }
     }

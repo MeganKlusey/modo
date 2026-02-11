@@ -18,8 +18,14 @@
 
   &__overview {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    gap: var(--xxhuge);
+    gap: var(--base);
+
+    @media screen and (min-width: 1024px) {
+      flex-direction: row;
+      gap: var(--xxhuge);
+    }
   }
 
   &__title {
@@ -28,9 +34,12 @@
   }
 
   &__text {
-    max-width: 45.5rem;
     width: auto;
     text-wrap: pretty;
+
+    @media screen and (min-width: 1024px) {
+      max-width: 45.5rem;
+    }
   }
 
   &__images {

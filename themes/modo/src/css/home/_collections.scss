@@ -53,12 +53,10 @@
 
   &__item {
     position: sticky;
-    height: calc(100vh - (var(--xxlarge) * 2));
+    height: calc(100vh - (var(--xxlarge) * 4));
 
     @for $i from 1 through 3 {
       &:nth-child(3n + #{$i}) {
-        height: calc(100vh - (var(--xxlarge) * 4));
-
         @if $i == 1 {
           top: var(--xxlarge);
         } @else {
@@ -71,6 +69,7 @@
       @media screen and (min-width: 768px) {
         &:nth-child(n) {
           top: var(--xxlarge);
+          height: calc(100vh - (var(--xxlarge) * 2));
         }
 
         &:not(:last-of-type) {

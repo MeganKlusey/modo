@@ -113,3 +113,12 @@
     register_post_type( 'testimonial', $args );
 	}
 	add_action( 'init', 'testimonials_post_type' );
+
+	// AOS
+	function modo_enqueue_aos() {
+		wp_enqueue_style('aos-css', get_stylesheet_directory_uri() . '/node_modules/aos/dist/aos.css', array(), '2.3.4');
+		wp_enqueue_script('aos-js', get_stylesheet_directory_uri() . '/node_modules/aos/dist/aos.js', array('jquery'), '2.3.4', true);
+
+		wp_add_inline_script('aos-js', 'AOS.init();');
+	}
+	add_action('wp_enqueue_scripts', 'modo_enqueue_aos');

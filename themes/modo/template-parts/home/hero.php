@@ -23,9 +23,7 @@
 				</ul>
 			</div>
 			<div class="hero__right">
-				<h1 class="hero__title">
-					<span>Modo</span><span>Museum</span>
-				</h1>
+				<h1 class="hero__title"><?= get_bloginfo("name") ?></h1>
 				<div class="hero__description">
 					<p class="text-sm">Step into a world of timeless stories, rare collections, and unforgettable experiences.</p>
 					<p class="text-sm">(Since 2018)</p>

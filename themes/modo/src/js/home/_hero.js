@@ -1,12 +1,21 @@
 document.addEventListener("DOMContentLoaded", function () {
   gsap.registerPlugin(SplitText);
+  let tl = gsap.timeline();
 
-  let split = SplitText.create(".hero__title", { type: "words" });
+  let titleSplit = SplitText.create(".hero__title", { type: "words" });
 
-  gsap.from(split.words, {
+  tl.from(".hero__description", {
     duration: 1,
     x: -100,
     autoAlpha: 0,
-    stagger: 0.25,
-  });
+  }).from(
+    titleSplit.words,
+    {
+      duration: 1,
+      x: -100,
+      autoAlpha: 0,
+      stagger: -0.25,
+    },
+    0.25,
+  );
 });

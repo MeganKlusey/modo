@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   gsap.utils.toArray(".exhibitions__item").forEach((item) => {
     gsap.from(item, {
-      y: 20,
+      y: 10,
       autoAlpha: 0,
       duration: 0.8,
       scrollTrigger: {

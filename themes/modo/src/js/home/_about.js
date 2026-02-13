@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
   gsap.registerPlugin(SplitText);
   gsap.registerPlugin(ScrollTrigger);
+
   let tl = gsap.timeline({
     scrollTrigger: {
       trigger: ".about__text h2",
-      start: "top 80%",
     },
   });
 

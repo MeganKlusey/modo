@@ -5,9 +5,8 @@
 				<h2 class="text-xs">About</h2>
 				<p class="text-2xl">Founded to preserve and celebrate art, history, and culture, our museum brings together
 					treasures from across centuries and continents. Whether you're passionate about ancient civilizations,
-					fascinated
-					by modern art, or looking for an inspiring day out, our galleries and experiences offer something for
-					everyone.
+					fascinated by modern art, or looking for an inspiring day out, our galleries and experiences offer something
+					for everyone.
 				</p>
 			</div>
 			<div class="about__images">
@@ -26,11 +25,11 @@
 					foreach($images as $image) {
 
 					if ($index === 0) {
-						echo '<div class="row">';
+						echo '<div class="about__row">';
 					}
 				?>
 				<img src="<?= esc_url(wp_get_attachment_url($image["url"])); ?>" alt=""
-					class="image image-<?= $image["label"]; ?>" />
+					class="about__image about__image--<?= $image["label"]; ?>" />
 				<?php 
 					if ($index === 1) {
 						echo '</div>';

@@ -1,4 +1,4 @@
-<footer>
+<footer class="footer">
 	<div class="wrapper-padding">
 		<div class="wrapper">
 			<div class="case-studies">
@@ -15,26 +15,26 @@
 				<div class="links__left">
 					<nav>
 						<?php
-									wp_nav_menu([
-										"menu" => "Primary Menu",
-										"container" => "false",
-										"link_class" => "text-xs"
-									]);
-								?>
+							wp_nav_menu([
+								"menu" => "Primary Menu",
+								"container" => "false",
+								"link_class" => "text-xs"
+							]);
+						?>
 					</nav>
 					<ul class="links__offsite">
 						<?php 
-									$offsiteLinks = [
-										["label" => "X", "url" => "#"],
-										["label" => "LinkedIn", "url" => "#"],
-										["label" => "Instagram", "url" => "#"],
-										["label" => "hello@megan.com", "url" => "#"],
-									];
+							$offsiteLinks = [
+								["label" => "X", "url" => "#"],
+								["label" => "LinkedIn", "url" => "#"],
+								["label" => "Instagram", "url" => "#"],
+								["label" => "hello@megan.com", "url" => "#"],
+							];
 
-									foreach ($offsiteLinks as $offsiteLink) {
-								?>
-						<li>
-							<a href="<?= $offsiteLink["url"] ?>" class="text-xs"><?= $offsiteLink["label"]; ?></a>
+							foreach ($offsiteLinks as $offsiteLink) {
+						?>
+						<li class="links__item">
+							<a href="<?= $offsiteLink["url"] ?>" class="links__link text-xs"><?= $offsiteLink["label"]; ?></a>
 						</li>
 						<?php } ?>
 					</ul>
@@ -50,7 +50,7 @@
 		</div>
 	</div>
 	<div class="carousel">
-		<div class="images">
+		<div class="carousel__images">
 			<?php
 					$images = [
 						["label" => "1", "url" => "44"],
@@ -62,10 +62,10 @@
 					foreach ($images as $image) {
 				?>
 			<img src="<?= esc_url(wp_get_attachment_url($image["url"])); ?>" alt=""
-				class="image image-<?= $image["label"] ?>" />
+				class="carousel__image carousel__image--<?= $image["label"] ?>" />
 			<?php } ?>
 		</div>
-		<div aria-hidden class="images">
+		<div aria-hidden class="carousel__images">
 			<?php
 					$images = [
 						["label" => "1", "url" => "44"],
@@ -77,7 +77,7 @@
 					foreach ($images as $image) {
 				?>
 			<img src="<?= esc_url(wp_get_attachment_url($image["url"])); ?>" alt=""
-				class="image image-<?= $image["label"] ?>" />
+				class="carousel__image carousel__image--<?= $image["label"] ?>" />
 			<?php } ?>
 		</div>
 	</div>

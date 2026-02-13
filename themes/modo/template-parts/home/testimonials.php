@@ -14,7 +14,7 @@
 						
 						if ( $query->have_posts() ) :
 						while ( $query->have_posts() ) : $query->the_post(); ?>
-					<img src="<?= get_the_post_thumbnail_url(); ?>" alt="" class="image testimonials__image" />
+					<img src="<?= get_the_post_thumbnail_url(); ?>" alt="" class="testimonials__image" />
 					<?php
 						endwhile;
 						wp_reset_postdata();
@@ -39,7 +39,7 @@
 								while ( $query->have_posts() ) : $query->the_post();
 							?>
 						<li class="testimonials__item">
-							<button><img src="<?= get_the_post_thumbnail_url(); ?>" alt=""
+							<button class="testimonials__item-button"><img src="<?= get_the_post_thumbnail_url(); ?>" alt=""
 									class="testimonials__item-image" /></button>
 						</li>
 						<?php

@@ -44,4 +44,28 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("resize", () => {
     updateHeight(true);
   });
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from(".exhibitions__left h2", {
+    scrollTrigger: {
+      trigger: ".exhibitions__left h2",
+      start: "top 85%",
+    },
+    duration: 0.8,
+    y: 10,
+    autoAlpha: 0,
+  });
+
+  gsap.utils.toArray(".exhibitions__item").forEach((item) => {
+    gsap.from(item, {
+      y: 20,
+      autoAlpha: 0,
+      duration: 0.8,
+      scrollTrigger: {
+        trigger: item,
+        start: "top 85%",
+      },
+    });
+  });
 });

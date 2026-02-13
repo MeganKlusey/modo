@@ -22,8 +22,8 @@
 				if ( $query->have_posts() ) :
 				while ( $query->have_posts() ) : $query->the_post(); ?>
 			<li class="collections__item">
-				<img src="<?= get_the_post_thumbnail_url(); ?>" alt="" class="image collections__item-image" />
-				<div class="gradient"></div>
+				<img src="<?= get_the_post_thumbnail_url(); ?>" alt="" class="collections__item-image" />
+				<div class="collections__item-gradient"></div>
 				<div class="collections__item-info">
 					<p class="collections__item-title text-xs"><?php the_title(); ?></p>
 					<p class="collections__item-date text-xs">(2018)</p>

@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const button = document.querySelector(".hamburger-button");
+  const button = document.querySelector(".header__toggle");
   const hamburger = document.querySelector(".hamburger");
-  const nav = document.querySelector(".header-nav");
+  const nav = document.querySelector(".header__nav");
 
   function toggleMenu() {
     hamburger.classList.toggle("active");
@@ -25,14 +25,14 @@ document.addEventListener("DOMContentLoaded", function () {
   let mm = gsap.matchMedia();
 
   mm.add("(max-width: 767px)", () => {
-    gsap.from(".menu__wrapper .menu-item:first-child", {
+    gsap.from(".header__title", {
       duration: 1,
       y: -100,
       autoAlpha: 0,
       stagger: 0.08,
     });
   }).add("(min-width: 768px)", () => {
-    gsap.from(".menu__wrapper .menu-item", {
+    gsap.from(".header .js-animate", {
       duration: 1,
       y: -100,
       autoAlpha: 0,

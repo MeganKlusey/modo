@@ -10,21 +10,21 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<header>
-		<div class="menu__wrapper">
-			<a href="<?= get_home_url(); ?>" class="text-xs menu-item"><?= get_bloginfo("name") ?></a>
-			<button class="hamburger-button">
+	<header class="header">
+		<div class="header__wrapper">
+			<a href="<?= get_home_url(); ?>" class="header__title js-animate text-xs"><?= get_bloginfo("name") ?></a>
+			<button class="header__toggle">
 				<? get_template_part("src/inc/icons/hamburger") ?>
 			</button>
-			<nav class="header-nav">
+			<nav class="header__nav">
 				<?php
 					wp_nav_menu([
 						"menu" => "Primary Menu",
 						"container" => "false",
-						"link_class" => "text-xs menu-item"
+						"link_class" => "menu__item js-animate text-xs"
 					]);
 				?>
 			</nav>
-			<p class="location text-xs menu-item">LA, California</p>
+			<p class="header__location js-animate text-xs">LA, California</p>
 		</div>
 	</header>

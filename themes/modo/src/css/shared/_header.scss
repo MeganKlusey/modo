@@ -1,10 +1,10 @@
-header {
+.header {
   position: absolute;
   z-index: 1;
   width: 100%;
   box-sizing: border-box;
 
-  .menu__wrapper {
+  &__wrapper {
     display: flex;
     justify-content: space-between;
     padding: var(--xlarge) var(--base);
@@ -13,67 +13,67 @@ header {
     @media screen and (min-width: 768px) {
       padding: var(--xlarge) var(--xxlarge);
     }
+  }
 
-    .hamburger-button {
-      background-color: var(--white);
-      border: none;
-      height: 2.5rem;
-      width: 2.5rem;
-      padding: 0 var(--xsmall);
-      cursor: pointer;
-      display: block;
+  &__toggle {
+    background-color: var(--white);
+    border: none;
+    height: 2.5rem;
+    width: 2.5rem;
+    padding: 0 var(--xsmall);
+    cursor: pointer;
+    display: block;
 
-      @media screen and (min-width: 768px) {
-        display: none;
-      }
-    }
-
-    nav {
+    @media screen and (min-width: 768px) {
       display: none;
+    }
+  }
 
-      &.active {
-        display: block;
-        box-sizing: border-box;
-        position: absolute;
-        background-color: var(--black);
-        z-index: 1;
-        width: 200px;
-        right: var(--xlarge);
-        top: 100%;
-        padding: var(--base) var(--huge) var(--xxlarge);
+  &__nav {
+    display: none;
 
-        menu {
-          gap: var(--xlarge);
-        }
-      }
-
-      @media screen and (min-width: 768px) {
-        display: block;
-        position: relative;
-      }
+    &.active {
+      display: block;
+      box-sizing: border-box;
+      position: absolute;
+      background-color: var(--black);
+      z-index: 1;
+      width: 200px;
+      right: var(--xlarge);
+      top: 100%;
+      padding: var(--base) var(--huge) var(--xxlarge);
 
       .menu {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        list-style-type: none;
-        gap: var(--xxlarge);
-
-        @media screen and (min-width: 768px) {
-          display: flex;
-          flex-direction: row;
-        }
+        gap: var(--xlarge);
       }
     }
 
-    .location {
-      display: none;
+    @media screen and (min-width: 768px) {
+      display: block;
+      position: relative;
+    }
+
+    .menu {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      list-style-type: none;
+      gap: var(--xxlarge);
 
       @media screen and (min-width: 768px) {
-        display: block;
+        display: flex;
+        flex-direction: row;
       }
+    }
+  }
+
+  &__location {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: block;
     }
   }
 }

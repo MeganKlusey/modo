@@ -14,7 +14,7 @@
 						
 						if ( $query->have_posts() ) :
 						while ( $query->have_posts() ) : $query->the_post(); ?>
-					<img src="<?= get_the_post_thumbnail_url(); ?>" alt="" class="image exhibitions__image" />
+					<img src="<?= get_the_post_thumbnail_url(); ?>" alt="" class="exhibitions__image" />
 					<?php
 						endwhile;
 						wp_reset_postdata();
@@ -26,7 +26,9 @@
 					<?php						
 						if ( $query->have_posts() ) :
 						while ( $query->have_posts() ) : $query->the_post(); ?>
-					<li class="text-5xl exhibitions__item"><a href=""><?php the_title(); ?></a></li>
+					<li class="exhibitions__item text-5xl">
+						<a class="exhibitions__item-link" href=""><?php the_title(); ?></a>
+					</li>
 					<?php
 						endwhile;
 						wp_reset_postdata();

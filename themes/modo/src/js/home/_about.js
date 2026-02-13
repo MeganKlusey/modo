@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let tl = gsap.timeline({
     scrollTrigger: {
       trigger: ".about__text h2",
+      start: "top 85%",
     },
   });
 

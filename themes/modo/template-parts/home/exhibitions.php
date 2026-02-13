@@ -36,7 +36,7 @@
 					?>
 				</ul>
 				<a href="#" class="exhibitions__link text-xs">
-					<? get_template_part("src/inc/icons/bullet-point") ?>Get tickets
+					<?php get_template_part("src/inc/icons/bullet-point") ?>Get tickets
 				</a>
 			</div>
 		</div>

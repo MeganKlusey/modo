@@ -7,7 +7,7 @@
 					<p class="case-studies__text text-4xl">Great design isn't just about what you make. It's about who you make it
 						with.</p>
 					<a href="#" class="case-studies__link text-xs">
-						<? get_template_part("src/inc/icons/bullet-point") ?>Get started
+						<?php get_template_part("src/inc/icons/bullet-point") ?>Get started
 					</a>
 				</div>
 			</div>

@@ -1,5 +1,4 @@
 .footer {
-  gap: 6.5rem;
   position: relative;
 
   .wrapper-padding {
@@ -93,7 +92,7 @@
           list-style-type: none;
           gap: var(--xxlarge);
 
-          @media screen and (min-width: 767px) {
+          @media screen and (min-width: 768px) {
             gap: var(--huge);
           }
 

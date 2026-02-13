@@ -38,7 +38,7 @@ h2 {
   letter-spacing: 0em;
   line-height: 1;
 
-  @media only screen and (orientation: landscape) and (max-width: 767px) {
+  @media only screen and (orientation: landscape) and (max-width: 768px) {
     font-size: 3.5rem;
   }
 
@@ -57,7 +57,7 @@ h3 {
   letter-spacing: 0em;
   line-height: 1;
 
-  @media only screen and (orientation: landscape) and (max-width: 767px) {
+  @media only screen and (orientation: landscape) and (max-width: 768px) {
     font-size: 3rem;
   }
 
@@ -76,7 +76,7 @@ h4 {
   letter-spacing: 0em;
   line-height: 1.1;
 
-  @media only screen and (orientation: landscape) and (max-width: 767px) {
+  @media only screen and (orientation: landscape) and (max-width: 768px) {
     font-size: 2.75rem;
   }
 
@@ -95,7 +95,7 @@ h5 {
   letter-spacing: 0em;
   line-height: 1.15;
 
-  @media only screen and (orientation: landscape) and (max-width: 767px) {
+  @media only screen and (orientation: landscape) and (max-width: 768px) {
     font-size: 2.5rem;
   }
 
@@ -114,7 +114,7 @@ h6 {
   letter-spacing: 0em;
   line-height: 1.2;
 
-  @media only screen and (orientation: landscape) and (max-width: 767px) {
+  @media only screen and (orientation: landscape) and (max-width: 768px) {
     font-size: 2.25rem;
   }
 
@@ -182,7 +182,7 @@ h6 {
     font-size: var(--xxxlarge);
   }
 
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 768px) {
     font-size: var(--xxxlarge);
   }
 

@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let mm = gsap.matchMedia();
 
-  mm.add("(max-width: 767px)", () => {
+  mm.add("(max-width: 768px)", () => {
     gsap.from(".header__title", {
       duration: 1,
       y: -100,

@@ -14,8 +14,8 @@
 
 						foreach ($offsiteLinks as $offsiteLink) {
 					?>
-					<li>
-						<a href="<?= $offsiteLink["url"] ?>" class="text-xs"><?= $offsiteLink["label"]; ?>
+					<li class="hero__offsite-item">
+						<a href="<?= $offsiteLink["url"] ?>" class="hero__offsite-link text-xs"><?= $offsiteLink["label"]; ?>
 							<?php get_template_part('src/inc/icons/arrow'); ?>
 						</a>
 					</li>

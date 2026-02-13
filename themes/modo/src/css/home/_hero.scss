@@ -41,24 +41,24 @@
     position: absolute;
     left: 0;
     top: 0;
+  }
 
-    ul {
-      padding: 0;
-      margin: 0;
-      gap: 1.5rem;
-      display: flex;
-      flex-direction: column;
+  &__offsite-links {
+    padding: 0;
+    margin: 0;
+    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+  }
 
-      li {
-        list-style-type: none;
+  &__offsite-item {
+    list-style-type: none;
+  }
 
-        a {
-          display: flex;
-          align-items: center;
-          gap: 0.5rem;
-        }
-      }
-    }
+  &__offsite-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
   }
 
   &__right {

@@ -28,5 +28,13 @@ document.addEventListener("DOMContentLoaded", function () {
         stagger: -0.25,
       },
       0.5,
+    )
+    .from(
+      ".hero__image",
+      {
+        duration: 1.5,
+        scale: 1.2,
+      },
+      0,
     );
 });

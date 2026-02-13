@@ -12,7 +12,7 @@
 <body <?php body_class(); ?>>
 	<header>
 		<div class="menu__wrapper">
-			<a href="<?= get_home_url(); ?>" class="text-xs"><?= get_bloginfo("name") ?></a>
+			<a href="<?= get_home_url(); ?>" class="text-xs menu-item"><?= get_bloginfo("name") ?></a>
 			<button class="hamburger-button">
 				<? get_template_part("src/inc/icons/hamburger") ?>
 			</button>
@@ -21,10 +21,10 @@
 					wp_nav_menu([
 						"menu" => "Primary Menu",
 						"container" => "false",
-						"link_class" => "text-xs"
+						"link_class" => "text-xs menu-item"
 					]);
 				?>
 			</nav>
-			<p class="location text-xs">LA, California</p>
+			<p class="location text-xs menu-item">LA, California</p>
 		</div>
 	</header>

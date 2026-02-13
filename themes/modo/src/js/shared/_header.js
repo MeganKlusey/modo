@@ -21,4 +21,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener("load", openMobileMenu);
   window.addEventListener("resize", openMobileMenu);
+
+  let mm = gsap.matchMedia();
+
+  mm.add("(max-width: 767px)", () => {
+    gsap.from(".menu__wrapper .menu-item:first-child", {
+      duration: 1,
+      y: -100,
+      autoAlpha: 0,
+      stagger: 0.08,
+    });
+  }).add("(min-width: 768px)", () => {
+    gsap.from(".menu__wrapper .menu-item", {
+      duration: 1,
+      y: -100,
+      autoAlpha: 0,
+      stagger: 0.08,
+    });
+  });
 });

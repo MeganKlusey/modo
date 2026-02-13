@@ -78,7 +78,7 @@
         &:not(:last-of-type) {
           animation: scale both;
           animation-timeline: view();
-          animation-range: entry 110% cover calc(400vh - (var(--xxlarge) * 2));
+          animation-range: entry 110% cover calc(400dvh - (var(--xxlarge) * 2));
         }
       }
     }

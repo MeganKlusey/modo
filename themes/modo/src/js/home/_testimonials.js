@@ -89,9 +89,9 @@ document.addEventListener("DOMContentLoaded", async function () {
       start: "top 85%",
     },
     duration: 1,
-    y: 80,
+    y: 50,
     autoAlpha: 0,
-    stagger: 0.25,
+    stagger: 0.15,
   });
 
   ScrollTrigger.refresh();

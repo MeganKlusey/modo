@@ -1,27 +1,32 @@
-document.addEventListener("DOMContentLoaded", function () {
-  function adjustTextWidth() {
-    const container = document.querySelector(".case-studies__right");
-    const text = container.querySelector(".case-studies__text");
+document.addEventListener("DOMContentLoaded", async function () {
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(SplitText);
 
-    container.style.width = "auto";
+  await document.fonts.ready;
 
-    const range = document.createRange();
-    range.selectNodeContents(text);
-    const rects = range.getClientRects();
-
-    let maxWidth = 0;
-    for (let i = 0; i < rects.length; i++) {
-      if (rects[i].width > maxWidth) maxWidth = rects[i].width;
-    }
-
-    container.style.width = `${Math.ceil(maxWidth)}px`;
-  }
-
-  window.addEventListener("load", () => {
-    requestAnimationFrame(adjustTextWidth);
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".case-studies",
+      start: "top 85%",
+    },
   });
 
-  window.addEventListener("resize", () => {
-    adjustTextWidth();
-  });
+  let textSplit = SplitText.create(".case-studies__text", { type: "lines" });
+
+  tl.from(".case-studies__title", {
+    duration: 0.8,
+    y: 10,
+    autoAlpha: 0,
+  }).from(
+    textSplit.lines,
+    {
+      duration: 0.8,
+      y: 10,
+      autoAlpha: 0,
+      stagger: 0.15,
+    },
+    0.15,
+  );
+
+  ScrollTrigger.refresh();
 });

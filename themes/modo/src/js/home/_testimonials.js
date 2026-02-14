@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", async function () {
   const container = document.querySelector(".testimonials__images");
   const images = document.querySelectorAll(".testimonials__image");
   const info = document.querySelectorAll(".testimonials__info");
@@ -47,6 +47,8 @@ document.addEventListener("DOMContentLoaded", function () {
   gsap.registerPlugin(ScrollTrigger);
   gsap.registerPlugin(SplitText);
 
+  await document.fonts.ready;
+
   let quoteSplit = SplitText.create(".testimonials__quote", { type: "lines" });
 
   gsap.from(".testimonials__title", {
@@ -91,4 +93,6 @@ document.addEventListener("DOMContentLoaded", function () {
     autoAlpha: 0,
     stagger: 0.25,
   });
+
+  ScrollTrigger.refresh();
 });

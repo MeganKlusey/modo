@@ -1,5 +1,8 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", async function () {
   gsap.registerPlugin(SplitText);
+
+  await document.fonts.ready;
+
   let tl = gsap.timeline();
 
   let titleSplit = SplitText.create(".hero__title", { type: "words" });
@@ -37,4 +40,6 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       0,
     );
+
+  ScrollTrigger.refresh();
 });

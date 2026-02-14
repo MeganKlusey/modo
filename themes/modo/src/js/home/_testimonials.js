@@ -43,4 +43,52 @@ document.addEventListener("DOMContentLoaded", function () {
     cancelAnimationFrame(rafId);
     rafId = requestAnimationFrame(() => updateSlider(false));
   });
+
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(SplitText);
+
+  let quoteSplit = SplitText.create(".testimonials__quote", { type: "lines" });
+
+  gsap.from(".testimonials__title", {
+    scrollTrigger: {
+      trigger: ".testimonials__title",
+      start: "top 85%",
+    },
+    duration: 0.8,
+    y: 10,
+    autoAlpha: 0,
+  });
+
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".testimonials__quote",
+      start: "top 85%",
+    },
+  });
+
+  tl.from(quoteSplit.lines, {
+    duration: 0.8,
+    y: 10,
+    autoAlpha: 0,
+    stagger: 0.1,
+  }).from(
+    ".testimonials__author",
+    {
+      duration: 0.8,
+      y: 10,
+      autoAlpha: 0,
+    },
+    0.2,
+  );
+
+  gsap.from(".testimonials__item", {
+    scrollTrigger: {
+      trigger: ".testimonials__item",
+      start: "top 85%",
+    },
+    duration: 1,
+    y: 80,
+    autoAlpha: 0,
+    stagger: 0.25,
+  });
 });

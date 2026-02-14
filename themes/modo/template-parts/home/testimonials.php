@@ -25,7 +25,7 @@
 						if ( $query->have_posts() ) :
 						while ( $query->have_posts() ) : $query->the_post(); ?>
 					<div class="testimonials__info">
-						<q class="testimonials__quote text-2xl"><?= get_the_excerpt(); ?></q>
+						<q class="testimonials__quote text-2xl">"<?= get_the_excerpt(); ?>"</q>
 						<p class="testimonials__author text-sm"><?= the_title(); ?></p>
 					</div>
 					<?php

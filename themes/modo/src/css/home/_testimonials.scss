@@ -85,6 +85,15 @@
     }
   }
 
+  &__quote {
+    quotes: none;
+
+    &::before,
+    ::after {
+      content: "";
+    }
+  }
+
   &__author {
     color: var(--grey-200);
   }

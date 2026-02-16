@@ -241,14 +241,12 @@ a {
     .js-roll-arrow::after {
       content: "";
       position: absolute;
-
       background-repeat: no-repeat;
       background-position: center;
       background-size: 100% 100%;
       width: 16px;
       height: 16px;
       transform: translate(-32px, 16px);
-
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M5.08316 4.55289H11.4471V10.9169M11.0052 4.99483L4.55283 11.4472' stroke='white' stroke-linecap='square' stroke-miterlimit='10' stroke-width='1.5px' /%3E%3C/svg%3E");
     }
   }

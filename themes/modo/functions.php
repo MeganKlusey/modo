@@ -41,6 +41,14 @@
 	}
 	add_filter( 'nav_menu_link_attributes', 'add_menu_link_class', 1, 3 );
 
+	function wrap_menu_link_text($title, $item, $args, $depth) {
+		if (property_exists($args, 'link_class')) {
+			$title = '<span class="nav-text js-roll-text" data-text="' . $title . '">' . $title . '</span>';
+		}
+		return $title;
+	}
+	add_filter('nav_menu_item_title', 'wrap_menu_link_text', 10, 4);
+
 	// Custom Post Types
 	function exhibitions_post_type() {
 		$args = [

@@ -34,7 +34,8 @@
 							foreach ($offsiteLinks as $offsiteLink) {
 						?>
 						<li class="links__item">
-							<a href="<?= $offsiteLink["url"] ?>" class="links__link text-xs"><?= $offsiteLink["label"]; ?></a>
+							<a href="<?= $offsiteLink["url"] ?>" class="links__link text-xs"><span class="js-roll-text"
+									data-text="<?= $offsiteLink["label"]; ?>"><?= $offsiteLink["label"]; ?><span></a>
 						</li>
 						<?php } ?>
 					</ul>

@@ -1,4 +1,5 @@
 import "../css/main.scss";
+import "./_global";
 import "./shared/_header";
 import "./shared/_footer";
 import "./home/_hero";

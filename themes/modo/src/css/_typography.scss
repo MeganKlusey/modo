@@ -214,8 +214,24 @@ a {
   text-transform: uppercase;
   display: flex;
   width: fit-content;
+  overflow: hidden;
 
   &:focus-visible {
     outline: none;
+  }
+
+  &:has(> .js-roll-text) {
+    .js-roll-text {
+      position: relative;
+      display: inline-block;
+      transition-property: transform;
+      transition-duration: 0.4s;
+
+      &::after {
+        content: attr(data-text);
+        display: block;
+        position: absolute;
+      }
+    }
   }
 }

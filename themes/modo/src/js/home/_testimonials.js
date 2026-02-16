@@ -8,9 +8,11 @@ document.addEventListener("DOMContentLoaded", async function () {
   let activeIndex = 0;
   let lastActiveIndex = 0;
 
-  items[0]?.classList.add("active");
-  images[0]?.classList.add("active");
-  info[0]?.classList.add("active");
+  if (!images.length || !items.length || !info.length) return;
+
+  items[0].classList.add("active");
+  images[0].classList.add("active");
+  info[0].classList.add("active");
 
   items.forEach((item, itemIndex) => {
     item.addEventListener("click", () => {
@@ -90,8 +92,9 @@ document.addEventListener("DOMContentLoaded", async function () {
     },
     duration: 1,
     y: 50,
-    autoAlpha: 0,
+    opacity: 0,
     stagger: 0.15,
+    clearProps: "opacity",
   });
 
   ScrollTrigger.refresh();

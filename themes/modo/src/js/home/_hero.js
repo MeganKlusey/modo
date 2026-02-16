@@ -1,11 +1,10 @@
 document.addEventListener("DOMContentLoaded", async function () {
   gsap.registerPlugin(SplitText);
 
-  await document.fonts.ready;
-
+  let titleSplit = SplitText.create(".hero__title", { type: "words" });
   let tl = gsap.timeline();
 
-  let titleSplit = SplitText.create(".hero__title", { type: "words" });
+  await document.fonts.ready;
 
   tl.from(".hero__offsite-links > li", {
     duration: 1,

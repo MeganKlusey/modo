@@ -19,7 +19,7 @@
 			<nav class="header__nav">
 				<?php
 					wp_nav_menu([
-						"menu" => "Primary Menu",
+						"menu" => "primary-menu",
 						"container" => "false",
 						"link_class" => "menu__item js-animate text-xs"
 					]);

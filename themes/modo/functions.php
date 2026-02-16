@@ -37,6 +37,10 @@
 		if (property_exists($args, 'link_class')) {
 			$atts['class'] = $args->link_class;
 		}
+		
+		if ($args->menu === 'primary-menu') {
+    	$atts['href'] = '#';
+    }
 		return $atts;
 	}
 	add_filter( 'nav_menu_link_attributes', 'add_menu_link_class', 1, 3 );

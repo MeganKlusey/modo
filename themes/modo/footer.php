@@ -17,7 +17,7 @@
 					<nav>
 						<?php
 							wp_nav_menu([
-								"menu" => "Primary Menu",
+								"menu" => "primary-menu",
 								"container" => "false",
 								"link_class" => "text-xs"
 							]);

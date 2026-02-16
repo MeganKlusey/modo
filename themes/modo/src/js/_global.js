@@ -21,10 +21,4 @@ document.addEventListener("DOMContentLoaded", function () {
       arrow[index].style.transform = "translate(0, 0)";
     });
   });
-
-  arrow.forEach((el) => {
-    if (el.dataset.text) {
-      el.insertAdjacentHTML("beforeend", el.dataset.text);
-    }
-  });
 });

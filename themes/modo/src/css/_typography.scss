@@ -220,18 +220,21 @@ a {
     outline: none;
   }
 
-  &:has(> .js-roll-text) {
-    .js-roll-text {
+  &:has(> .js-roll-text),
+  &:has(> .js-roll-arrow) {
+    .js-roll-text,
+    .js-roll-arrow {
       position: relative;
       display: inline-block;
       transition-property: transform;
       transition-duration: 0.4s;
+    }
 
-      &::after {
-        content: attr(data-text);
-        display: block;
-        position: absolute;
-      }
+    .js-roll-text::after {
+      content: attr(data-text);
+      display: block;
+      position: absolute;
+      color: var(--white);
     }
   }
 }

@@ -27,7 +27,7 @@
 						if ( $query->have_posts() ) :
 						while ( $query->have_posts() ) : $query->the_post(); ?>
 					<li class="exhibitions__item text-5xl">
-						<a class="exhibitions__item-link" href=""><?php the_title(); ?></a>
+						<a class="exhibitions__item-link" href="#"><?php the_title(); ?></a>
 					</li>
 					<?php
 						endwhile;
@@ -36,7 +36,8 @@
 					?>
 				</ul>
 				<a href="#" class="exhibitions__link text-xs">
-					<?php get_template_part("src/inc/icons/bullet-point") ?>Get tickets
+					<?php get_template_part("src/inc/icons/bullet-point") ?>
+					<span class="js-roll-text" data-text="Get tickets">Get tickets</span>
 				</a>
 			</div>
 		</div>

@@ -7,7 +7,8 @@
 					<p class="case-studies__text text-4xl">Great design isn't just about what you make. It's about who you make it
 						with.</p>
 					<a href="#" class="case-studies__link text-xs">
-						<?php get_template_part("src/inc/icons/bullet-point") ?>Get started
+						<?php get_template_part("src/inc/icons/bullet-point") ?>
+						<span class="js-roll-text" data-text="Get started">Get started</span>
 					</a>
 				</div>
 			</div>

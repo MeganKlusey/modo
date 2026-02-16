@@ -12,7 +12,7 @@
 <body <?php body_class(); ?>>
 	<header class="header">
 		<div class="header__wrapper">
-			<a href="<?= get_home_url(); ?>" class="header__title js-animate text-xs"><?= get_bloginfo("name") ?></a>
+			<a href="#" class="header__title js-animate text-xs"><?= get_bloginfo("name") ?></a>
 			<button class="header__toggle">
 				<?php get_template_part("src/inc/icons/hamburger") ?>
 			</button>

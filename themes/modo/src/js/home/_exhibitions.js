@@ -59,13 +59,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   gsap.utils.toArray(".exhibitions__item").forEach((item) => {
     gsap.from(item, {
-      y: 10,
-      autoAlpha: 0,
-      duration: 0.8,
       scrollTrigger: {
         trigger: item,
         start: "top 85%",
       },
+      y: 10,
+      autoAlpha: 0,
+      duration: 0.8,
+      clearProps: "opacity",
     });
   });
 });

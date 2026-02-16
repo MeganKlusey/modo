@@ -8,9 +8,9 @@ document.addEventListener("DOMContentLoaded", async function () {
   let activeIndex = 0;
   let lastActiveIndex = 0;
 
-  items[0].classList.add("active");
-  images[0].classList.add("active");
-  info[0].classList.add("active");
+  items[0]?.classList.add("active");
+  images[0]?.classList.add("active");
+  info[0]?.classList.add("active");
 
   items.forEach((item, itemIndex) => {
     item.addEventListener("click", () => {

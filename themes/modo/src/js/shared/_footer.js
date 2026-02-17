@@ -4,6 +4,9 @@ document.addEventListener("DOMContentLoaded", async function () {
 
   await document.fonts.ready;
 
+  const track = document.querySelector(".carousel__track");
+  track.classList.add("animate");
+
   let tl = gsap.timeline({
     scrollTrigger: {
       trigger: ".case-studies",

@@ -52,8 +52,9 @@
 		</div>
 	</div>
 	<div class="carousel">
-		<div class="carousel__images">
-			<?php
+		<div class="carousel__track">
+			<div class="carousel__images">
+				<?php
 					$images = [
 						["label" => "1", "url" => "44"],
 						["label" => "2", "url" => "20"],
@@ -63,24 +64,16 @@
 
 					foreach ($images as $image) {
 				?>
-			<img src="<?= esc_url(wp_get_attachment_url($image["url"])); ?>" alt=""
-				class="carousel__image carousel__image--<?= $image["label"] ?>" />
-			<?php } ?>
-		</div>
-		<div aria-hidden class="carousel__images">
-			<?php
-					$images = [
-						["label" => "1", "url" => "44"],
-						["label" => "2", "url" => "20"],
-						["label" => "3", "url" => "45"],
-						["label" => "4", "url" => "22"]
-					];
-
-					foreach ($images as $image) {
-				?>
-			<img src="<?= esc_url(wp_get_attachment_url($image["url"])); ?>" alt=""
-				class="carousel__image carousel__image--<?= $image["label"] ?>" />
-			<?php } ?>
+				<img src="<?= esc_url(wp_get_attachment_url($image["url"])); ?>"
+					class="carousel__image carousel__image--<?= $image["label"] ?>" />
+				<?php } ?>
+			</div>
+			<div aria-hidden class="carousel__images">
+				<?php foreach ($images as $image) { ?>
+				<img src="<?= esc_url(wp_get_attachment_url($image["url"])); ?>"
+					class="carousel__image carousel__image--<?= $image["label"] ?>" />
+				<?php } ?>
+			</div>
 		</div>
 	</div>
 </footer>

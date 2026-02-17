@@ -5,7 +5,23 @@ document.addEventListener("DOMContentLoaded", async function () {
   await document.fonts.ready;
 
   const track = document.querySelector(".carousel__track");
-  track.classList.add("animate");
+
+  if (track) {
+    const breakpoints = ["(min-width: 768px)", "(min-width: 1024px)"];
+
+    track.classList.add("animate");
+
+    function restartAnimation() {
+      track.classList.remove("animate");
+      void track.offsetWidth;
+      track.classList.add("animate");
+    }
+
+    breakpoints.forEach((query) => {
+      const mq = window.matchMedia(query);
+      mq.addEventListener("change", restartAnimation);
+    });
+  }
 
   let tl = gsap.timeline({
     scrollTrigger: {

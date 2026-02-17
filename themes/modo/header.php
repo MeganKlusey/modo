@@ -15,6 +15,7 @@
 			<a href="#" class="header__title js-animate text-xs"><?= get_bloginfo("name") ?></a>
 			<button class="header__toggle">
 				<?php get_template_part("src/inc/icons/hamburger") ?>
+				<?php get_template_part("src/inc/icons/close") ?>
 			</button>
 			<div class="header__nav-wrapper">
 				<nav class="header__nav">

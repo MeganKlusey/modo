@@ -1,15 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
   const button = document.querySelector(".header__toggle");
   const hamburger = document.querySelector(".hamburger");
+  const close = document.querySelector(".close");
   const navWrapper = document.querySelector(".header__nav-wrapper");
 
   function toggleMenu() {
-    if (!hamburger.classList.contains("active")) {
-      hamburger.classList.add("active");
+    if (!button.classList.contains("active")) {
+      button.classList.add("active");
+      hamburger.style.display = "none";
+      close.style.display = "block";
       navWrapper.classList.add("active");
       navWrapper.style.transition = "opacity 0.4s ease, transform 0.4s ease";
     } else {
-      hamburger.classList.remove("active");
+      button.classList.remove("active");
+      hamburger.style.display = "block";
+      close.style.display = "none";
       navWrapper.classList.remove("active");
     }
   }
@@ -20,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const width = window.innerWidth;
 
     if (width >= 768) {
-      hamburger.classList.remove("active");
+      button.classList.remove("active");
       navWrapper.classList.remove("active");
       navWrapper.style.transition = "none";
     }

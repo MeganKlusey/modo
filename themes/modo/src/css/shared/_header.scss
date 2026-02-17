@@ -29,28 +29,40 @@
     }
   }
 
-  &__nav {
-    display: none;
+  &__nav-wrapper {
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 1;
+    width: 200px;
+    right: var(--base);
+    top: 100%;
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
 
     &.active {
-      display: block;
-      box-sizing: border-box;
-      position: absolute;
-      background-color: var(--black);
-      z-index: 1;
-      width: 200px;
-      right: var(--xlarge);
-      top: 100%;
-      padding: var(--base) var(--huge) var(--xxlarge);
-
-      .menu {
-        gap: var(--xlarge);
-      }
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
     }
 
     @media screen and (min-width: 768px) {
-      display: block;
       position: relative;
+      opacity: 1;
+      pointer-events: auto;
+      transform: none;
+      width: auto;
+      right: 0;
+    }
+  }
+
+  &__nav {
+    padding: var(--base) var(--huge) var(--xxlarge);
+    background-color: var(--black);
+
+    @media screen and (min-width: 768px) {
+      padding: 0;
+      background-color: transparent;
     }
 
     .menu {
@@ -63,10 +75,13 @@
       gap: var(--xxlarge);
 
       @media screen and (min-width: 768px) {
-        display: flex;
         flex-direction: row;
       }
     }
+  }
+
+  &__title {
+    height: 100%;
   }
 
   &__location {

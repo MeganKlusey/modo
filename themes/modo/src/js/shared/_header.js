@@ -1,11 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
   const button = document.querySelector(".header__toggle");
   const hamburger = document.querySelector(".hamburger");
-  const nav = document.querySelector(".header__nav");
+  const navWrapper = document.querySelector(".header__nav-wrapper");
 
   function toggleMenu() {
-    hamburger.classList.toggle("active");
-    nav.classList.toggle("active");
+    if (!hamburger.classList.contains("active")) {
+      hamburger.classList.add("active");
+      navWrapper.classList.add("active");
+      navWrapper.style.transition = "opacity 0.4s ease, transform 0.4s ease";
+    } else {
+      hamburger.classList.remove("active");
+      navWrapper.classList.remove("active");
+    }
   }
 
   button.addEventListener("click", toggleMenu);
@@ -15,7 +21,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (width >= 768) {
       hamburger.classList.remove("active");
-      nav.classList.remove("active");
+      navWrapper.classList.remove("active");
+      navWrapper.style.transition = "none";
     }
   }
 

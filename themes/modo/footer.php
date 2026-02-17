@@ -18,7 +18,7 @@
 						<?php
 							wp_nav_menu([
 								"menu" => "primary-menu",
-								"container" => "false",
+								"container" => false,
 								"link_class" => "text-xs"
 							]);
 						?>

@@ -27,7 +27,7 @@
 						if ( $query->have_posts() ) :
 						while ( $query->have_posts() ) : $query->the_post(); ?>
 					<li class="exhibitions__item text-5xl">
-						<a class="exhibitions__item-link" href="#"><?php the_title(); ?></a>
+						<?php the_title(); ?>
 					</li>
 					<?php
 						endwhile;

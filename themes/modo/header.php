@@ -16,15 +16,17 @@
 			<button class="header__toggle">
 				<?php get_template_part("src/inc/icons/hamburger") ?>
 			</button>
-			<nav class="header__nav">
-				<?php
-					wp_nav_menu([
-						"menu" => "primary-menu",
-						"container" => "false",
-						"link_class" => "menu__item js-animate text-xs"
-					]);
-				?>
-			</nav>
+			<div class="header__nav-wrapper">
+				<nav class="header__nav">
+					<?php
+						wp_nav_menu([
+							"menu" => "primary-menu",
+							"container" => false,
+							"link_class" => "menu__item js-animate text-xs"
+						]);
+					?>
+				</nav>
+			</div>
 			<p class="header__location js-animate text-xs">LA, California</p>
 		</div>
 	</header>

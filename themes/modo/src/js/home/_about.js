@@ -1,6 +1,9 @@
-document.addEventListener("DOMContentLoaded", function () {
-  gsap.registerPlugin(SplitText);
-  gsap.registerPlugin(ScrollTrigger);
+document.addEventListener("DOMContentLoaded", async function () {
+  gsap.registerPlugin(SplitText, ScrollTrigger);
+
+  await document.fonts.ready;
+
+  let textSplit = SplitText.create(".about__text p", { type: "lines" });
 
   let tl = gsap.timeline({
     scrollTrigger: {
@@ -8,8 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
       start: "top 85%",
     },
   });
-
-  let textSplit = SplitText.create(".about__text p", { type: "lines" });
 
   tl.from(".about__text h2", {
     duration: 0.8,
@@ -25,4 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     0.15,
   );
+
+  ScrollTrigger.refresh();
 });

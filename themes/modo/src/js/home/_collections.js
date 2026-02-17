@@ -1,8 +1,9 @@
 document.addEventListener("DOMContentLoaded", async function () {
-  gsap.registerPlugin(SplitText);
-  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(SplitText, ScrollTrigger);
 
   await document.fonts.ready;
+
+  let textSplit = SplitText.create(".collections__text", { type: "lines" });
 
   let tl = gsap.timeline({
     scrollTrigger: {
@@ -10,8 +11,6 @@ document.addEventListener("DOMContentLoaded", async function () {
       start: "top 85%",
     },
   });
-
-  let textSplit = SplitText.create(".collections__text", { type: "lines" });
 
   tl.from(".collections__title", {
     duration: 0.8,

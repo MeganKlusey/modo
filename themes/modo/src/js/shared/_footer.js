@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", async function () {
-  gsap.registerPlugin(ScrollTrigger);
-  gsap.registerPlugin(SplitText);
+  gsap.registerPlugin(ScrollTrigger, SplitText);
 
   await document.fonts.ready;
 
@@ -23,14 +22,14 @@ document.addEventListener("DOMContentLoaded", async function () {
     });
   }
 
+  let textSplit = SplitText.create(".case-studies__text", { type: "lines" });
+
   let tl = gsap.timeline({
     scrollTrigger: {
       trigger: ".case-studies",
       start: "top 85%",
     },
   });
-
-  let textSplit = SplitText.create(".case-studies__text", { type: "lines" });
 
   tl.from(".case-studies__title", {
     duration: 0.8,

@@ -24,9 +24,13 @@ document.addEventListener("DOMContentLoaded", async function () {
         i.style.transitionDuration = "0.4s";
         i.classList.remove("active");
       });
+
       item.classList.add("active");
 
-      images.forEach((image) => (image.style.transform = `translateX(-${container.offsetWidth * diff}px)`));
+      images.forEach((image) => {
+        image.style.transform = `translateX(-${container.offsetWidth * diff}px)`;
+      });
+
       info.forEach((i) => i.classList.remove("active"));
       info[itemIndex].classList.add("active");
     });
@@ -34,10 +38,13 @@ document.addEventListener("DOMContentLoaded", async function () {
 
   function updateSlider(noAnimation = false) {
     const width = container.offsetWidth;
+
     images.forEach((image) => {
       image.style.transitionDuration = noAnimation ? "0s" : "0.4s";
       image.style.transform = `translateX(-${width * activeIndex}px)`;
     });
+
+    ScrollTrigger.refresh();
   }
 
   window.addEventListener("resize", () => {
@@ -46,8 +53,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     rafId = requestAnimationFrame(() => updateSlider(false));
   });
 
-  gsap.registerPlugin(ScrollTrigger);
-  gsap.registerPlugin(SplitText);
+  gsap.registerPlugin(ScrollTrigger, SplitText);
 
   await document.fonts.ready;
 

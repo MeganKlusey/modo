@@ -1,10 +1,11 @@
 document.addEventListener("DOMContentLoaded", async function () {
   gsap.registerPlugin(SplitText);
 
-  let titleSplit = SplitText.create(".hero__title", { type: "words" });
-  let tl = gsap.timeline();
-
   await document.fonts.ready;
+
+  let titleSplit = SplitText.create(".hero__title", { type: "words" });
+
+  let tl = gsap.timeline();
 
   tl.from(".hero__offsite-links > li", {
     duration: 1,
@@ -39,6 +40,4 @@ document.addEventListener("DOMContentLoaded", async function () {
       },
       0,
     );
-
-  ScrollTrigger.refresh();
 });

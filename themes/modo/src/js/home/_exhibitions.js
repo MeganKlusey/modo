@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", async function () {
   const container = document.querySelector(".exhibitions__images");
   const images = document.querySelectorAll(".exhibitions__image");
   const items = document.querySelectorAll(".exhibitions__item");
@@ -37,15 +37,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const observer = new ResizeObserver(() => {
     updateHeight(true);
+    ScrollTrigger.refresh();
   });
 
   observer.observe(images[0]);
 
   window.addEventListener("resize", () => {
     updateHeight(true);
+    ScrollTrigger.refresh();
   });
 
   gsap.registerPlugin(ScrollTrigger);
+
+  await document.fonts.ready;
 
   gsap.from(".exhibitions__left h2", {
     scrollTrigger: {
@@ -69,4 +73,6 @@ document.addEventListener("DOMContentLoaded", function () {
       clearProps: "opacity",
     });
   });
+
+  ScrollTrigger.refresh();
 });

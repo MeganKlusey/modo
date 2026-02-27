@@ -126,7 +126,7 @@
 	}
 	add_action( 'init', 'testimonials_post_type' );
 
-	// AOS
+	// GSAP
 	function modo_gsap_script() {
 		wp_enqueue_script( 'gsap-js', 'https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js', array(), false, true );
 		wp_enqueue_script( 'gsap-st', 'https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/SplitText.min.js', array('gsap-js'), false, true );

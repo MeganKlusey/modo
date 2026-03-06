@@ -28,6 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
       button.classList.remove("active");
       navWrapper.classList.remove("active");
       navWrapper.style.transition = "none";
+      close.style.display = "none";
+      hamburger.style.display = "block";
     }
   }
 
